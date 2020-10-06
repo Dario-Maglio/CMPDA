@@ -1,4 +1,4 @@
-"""First assignment."""
+"""First assignment: reads a text.txt file and prints the relative frequencies of the characters."""
 
 import argparse
 import logging
@@ -7,14 +7,12 @@ import string
 import matplotlib.pyplot as plt
 
 
-def process(file_path):
-    """Reads a text.txt file and prints the relative frequencies of the characters."""
 
-    """Selects where the text begin."""
+def process(file_path):
+
     logging.info(f'Reading input file {file_path}...')
     with open(file_path) as input_file:
         text = input_file.read()
-
 
     start_time = time.time()
     num_chars = len(text)
@@ -26,7 +24,6 @@ def process(file_path):
         #    char_dict[ch.lower()] += 1
         #except KeyError:
         #   pass
-
     char_f = {ch: 0 for ch in string.ascii_lowercase}
     for ch in text:
         ch = ch.lower()
@@ -60,6 +57,4 @@ if __name__ == "__main__":
     if args.verbose:
         logging.basicConfig(level = logging.DEBUG)
         logging.info('Logging level set on DEBUG.')
-        process(args.inpfile)
-    else:
-        process(args.inpfile)
+    process(args.inpfile)
