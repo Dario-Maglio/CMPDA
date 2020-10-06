@@ -13,20 +13,30 @@ def process(file_path):
     """Selects where the text begin."""
     logging.info(f'Reading input file {file_path}...')
     with open(file_path) as input_file:
+        s = input('Do you want to change where the text begins and ends?(S/n) ')
+        if (s == 'S'):
+            start = int(input('Write the new starting line of the text:  '))
+            end = int(input('Write the new ending line of the text:  '))
+            if end<=start:
+                raise ValueError('The end line cannot come before the starting line.')
+            i=0
+            while i<start:
+                input_file.read(1)
+                
+            logging.info(f'The last line of code is {input_file.read(1)}.')
         text = input_file.read()
 
-
-    start_time = time.time()
-    num_chars = len(text)
-    logging.info(f'The total number of characters is {num_chars}.')
-
-    """Creats a dictionary of letter frequencies."""
     #char_dict = {chr(x): 0 for x in range(ord('a'), ord('z')+1)}
         #try:
         #    char_dict[ch.lower()] += 1
         #except KeyError:
         #   pass
 
+    start_time = time.time()
+    num_chars = len(text)
+    logging.info(f'The total number of characters is {num_chars}.')
+
+    """Creats a dictionary of letter frequencies."""
     char_f = {ch: 0 for ch in string.ascii_lowercase}
     for ch in text:
         ch = ch.lower()
@@ -59,7 +69,7 @@ if __name__ == "__main__":
 
     if args.verbose:
         logging.basicConfig(level = logging.DEBUG)
-        logging.info('Logging level set on DEBUG.')
+        logging.info('Logging level set to DEBUG')
         process(args.inpfile)
     else:
         process(args.inpfile)

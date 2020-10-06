@@ -139,7 +139,7 @@ finally: #usefull to close file
    print("This code will run no matter what")
 
 name = "123"
-#raise NameError("Invalid name!")    raise give error
+#raise NameError("Invalid name!")    raise gives error
 print(1)
 assert 2 + 2 == 4
 print(2)
