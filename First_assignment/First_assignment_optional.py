@@ -1,4 +1,4 @@
-"""First assignment."""
+"""First assignment: reads a text.txt file and prints the relative frequencies of the characters."""
 
 import argparse
 import logging
@@ -7,46 +7,48 @@ import string
 import matplotlib.pyplot as plt
 
 
-def process(file_path):
-    """Reads a text.txt file and prints the relative frequencies of the characters."""
 
-    """Selects where the text begin."""
+def process(file_path):
+    """Prepares the working file."""
+    s = input('Do you want to change the beginning and the ending of the text?(S/n) ')
+    if (s == 'S'):
+        start = int(input('From which line do you want to start?  '))
+        end = int(input('At which line do you want to stop? '))
+        if start < 1 : start = 1
+        if start > end : raise ValueError('The end line cannot come before the starting one!!!')
+    else:
+        start = 1
+        end = 100
+        """Here i've some problems."""
+    num_lines = end - start + 1
     logging.info(f'Reading input file {file_path}...')
     with open(file_path) as input_file:
-        s = input('Do you want to change where the text begins and ends?(S/n) ')
-        if (s == 'S'):
-            start = int(input('Write the new starting line of the text:  '))
-            end = int(input('Write the new ending line of the text:  '))
-            if end<=start:
-                raise ValueError('The end line cannot come before the starting line.')
-            i=0
-            while i<start:
-                input_file.read(1)
-                
-            logging.info(f'The last line of code is {input_file.read(1)}.')
-        text = input_file.read()
-
-    #char_dict = {chr(x): 0 for x in range(ord('a'), ord('z')+1)}
-        #try:
-        #    char_dict[ch.lower()] += 1
-        #except KeyError:
-        #   pass
-
+            for i in range(start-1):
+                input_file.readline()
+            with open('workfile.txt','w') as workfile:
+                for i in range(num_lines):
+                    workfile.write(input_file.readline())
+    with open('workfile.txt','r') as workfile:
+            text = workfile.read()
     start_time = time.time()
-    num_chars = len(text)
-    logging.info(f'The total number of characters is {num_chars}.')
 
-    """Creats a dictionary of letter frequencies."""
+    """Creats a dictionary of letter frequencies and counts the words."""
+    num_words = 0
     char_f = {ch: 0 for ch in string.ascii_lowercase}
     for ch in text:
         ch = ch.lower()
-        if ch in char_f:
-            char_f[ch] += 1
+        if ch in char_f: char_f[ch] += 1
+        if ch == ' ' or ch == '\n' : num_words += 1
+        """Good assumption?"""
 
+    """Output and graph."""
     num_letters = sum(char_f.values())
-    logging.info(f'The total number of letters is {num_letters}.')
-
-    """Prints and makes a graph of the results."""
+    if num_letters == 0 :
+        print('There are no letters in the text.')
+        return
+    print(f'The total number of letters is {num_letters}.')
+    print(f'The total number of words is {num_words}.')
+    print(f'The total number of lines is {num_lines}.')
     print('Relative frequencies of the letters:')
     for ch, num in char_f.items():
         print(f'{ch} -->  {num/num_letters:.3}')
@@ -61,6 +63,7 @@ def process(file_path):
         plt.show()
 
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('inpfile', type = str, help = 'Path to the input file')
@@ -69,7 +72,5 @@ if __name__ == "__main__":
 
     if args.verbose:
         logging.basicConfig(level = logging.DEBUG)
-        logging.info('Logging level set to DEBUG')
-        process(args.inpfile)
-    else:
-        process(args.inpfile)
+        logging.info('Logging level set on DEBUG.')
+    process(args.inpfile)
