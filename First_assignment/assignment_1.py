@@ -22,13 +22,13 @@ def process(file_path):
         start = 1
         end = 0
 
-    logging.info('Reading input file %s...', file_path)
+    logging.info(f'Reading input file {file_path}...')
     with open(file_path) as input_file:
         i = 1
         while i < start:
             i += 1
             input_file.readline()
-        logging.info('The starting line is %d.', i)
+        logging.info(f'The starting line is {i}.')
         with open('workfile.txt', 'w') as workfile:
             while True:
                 i += 1
