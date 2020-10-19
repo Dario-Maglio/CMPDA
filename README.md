@@ -1,2 +1,2 @@
 # Dario_CMPDA
-Repository of the cmpeda course at UniPi.
+Personale repository of the cmpeda course (UniPi).
