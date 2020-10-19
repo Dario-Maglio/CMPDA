@@ -1,2 +1,2 @@
 # Dario_CMPDA
-Assignments' repository of cmpda
+Repository of the cmpeda course at UniPi.
