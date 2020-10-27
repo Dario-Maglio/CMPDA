@@ -19,14 +19,14 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Dario_cmepda'
-copyright = '2020, Dario'
-author = 'Dario'
+project = 'Dario_CMPDA'
+copyright = '2020, Dario-Caf'
+author = 'Dario-Caf'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '2.0.5'
+release = '3.0.3'
 
 
 # -- General configuration ---------------------------------------------------
@@ -51,7 +51,7 @@ extensions = [
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['docstemplates']
+templates_path = ['.templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -72,7 +72,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['docsbuild', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['.build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
@@ -94,7 +94,7 @@ html_theme = 'alabaster'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['docsstatic']
+html_static_path = ['.static']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -110,7 +110,7 @@ html_static_path = ['docsstatic']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Dario_cmepdadoc'
+htmlhelp_basename = 'Dario_CMPDAdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -137,8 +137,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Dario_cmepda.tex', 'Dario\\_cmepda Documentation',
-     'Dario', 'manual'),
+    (master_doc, 'Dario_CMPDA.tex', 'Dario\\_CMPDA Documentation',
+     'Dario-Caf', 'manual'),
 ]
 
 
@@ -147,7 +147,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'dario_cmepda', 'Dario_cmepda Documentation',
+    (master_doc, 'dario_cmpda', 'Dario_CMPDA Documentation',
      [author], 1)
 ]
 
@@ -158,8 +158,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Dario_cmepda', 'Dario_cmepda Documentation',
-     author, 'Dario_cmepda', 'One line description of project.',
+    (master_doc, 'Dario_CMPDA', 'Dario_CMPDA Documentation',
+     author, 'Dario_CMPDA', 'One line description of project.',
      'Miscellaneous'),
 ]
 
