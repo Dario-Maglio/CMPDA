@@ -1,4 +1,5 @@
-#Interpolation and extrapolation
+"""Excercise of conversion of the interpolation and extrapolation fortran module
+    in python3."""
 
 def int_estr_interface(x,y):
     N=len(x)
@@ -20,12 +21,12 @@ def int_estr_interface(x,y):
 
 def int_estr(x,y,a,b):
     N=len(x)
-    assert (N==len(y)), 'Size x is different from size y!'                     
-    assert (x[N-1]>x[0]), 'The data set is not ordered!'                           
+    assert (N==len(y)), 'Size x is different from size y!'
+    assert (x[N-1]>x[0]), 'The data set is not ordered!'
     while (True):
         interp(N,x,y,a,b)
         if not(input('Do you want to try again?(S/n) ')=='S'): break
-    
+
 
 def interp(N, x, y, a2, b2):
     print('\nThe implemented methods are lagrange, aitken and updown:'
@@ -47,25 +48,25 @@ def interp(N, x, y, a2, b2):
         print('Your data file is ready.')
     else:
         print('Sorry, this method had not been implemented yet!\n')
-    
+
 
 
 def lagrange(N, x, x0, y):
     for l in range(N):
-       if (x[l]==x0): 
+       if (x[l]==x0):
            return y[l]
     y0=0.0
     for l in range(N):
        prod=1.0
        for m in range(N):
-          if(m==l): continue 
+          if(m==l): continue
           prod=prod*(x0-x[m])/(x[l]-x[m])
        y0=y0+prod*y[l]
     return y0
 
 def aitken(N, x, x0, y):
     for l in range(N):
-       if (x[l]==x0): 
+       if (x[l]==x0):
            return y[l]
     z=[y[i] for i in range(N)]
     for k in range(N-2):
