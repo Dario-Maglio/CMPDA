@@ -66,22 +66,3 @@ class VisualCluster(NeuralCluster):
 
 
 #------------------------------------------------------------------------------
-"""Verifying operations on clusters."""
-
-VIEW = NeuralCluster("Taste cluster", 25)
-print(VIEW)
-VIEW.num_neur = 5
-print(VIEW.energy())
-for i, stat in enumerate(VIEW):
-    if stat == -1:
-        stat = 1
-    VIEW[i] = stat
-print(VIEW[4])
-
-VIEW2 = VisualCluster(16)
-print(VIEW2)
-VIEW2.num_neur = 5
-print(VIEW2.energy())
-for i, stats in enumerate(zip(VIEW, VIEW2)):
-    VIEW2[i] = (stats[1] + stats[0])/2
-print(VIEW2[4])
