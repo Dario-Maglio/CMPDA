@@ -10,7 +10,8 @@ class TestCore(unittest.TestCase):
 
     def tests(self):
         # Load some data
-        t, v = numpy.loadtxt('/home/dario/Documents/GitHub/Dario_CMPDA/Assignments/Assignment_2/sample_data_file.txt', unpack=True)
+        t = numpy.linspace(0.1, 1.5, 12)
+        v = numpy.array([0.24, 0.39, 0.58, 0.77, 0.84, 0.95, 0.94, 0.83, 0.87, 0.48, 0.21, 0.04])
         # Thest the constructor
         v_data = VoltageData(t, v)
         # Test len()
