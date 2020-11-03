@@ -1,7 +1,6 @@
 """Excercising with classes and Hopfield neural networks."""
 
 import numpy as np
-#from matplotlib import pyplot as plt
 
 class NeuralCluster:
     """General neural cluster. Name and number of neurons as inputs."""
@@ -29,8 +28,7 @@ class NeuralCluster:
         return iter(self._states)
 
     def __call__(self, inp):
-        for data in inp:
-            self.output(data)
+        self.output(inp)
 
     @property
     def num_neur(self):
@@ -39,7 +37,7 @@ class NeuralCluster:
 
     @num_neur.setter
     def num_neur(self, new_value):
-        print(f'Unable to change the number of neurons.')
+        print(f'Unable to change the number of neurons externally.')
 
     def training(self, patterns):
         """First supervisioned training of the cluster."""
@@ -48,13 +46,42 @@ class NeuralCluster:
         """Weights and threshold upgrade at the end of the update."""
 
     def update_states(self):
-        """Update of the neural states."""
+        """Updates of the states until a dynamical attractor is reached."""
 
     def output(self, inp):
-        """Give an output attractor pattern for each input pattern."""
+        """Gives an output attractor pattern for each input pattern."""
         self._states = inp
+        self.update_states()
+        return self._states
 
-VIEW = NeuralCluster("Visual cluster", 25)
-VIEW.num_neur = 5
-print(VIEW[4])
+    def energy(self):
+        """Calculates the total energy of the neural state."""
+        return sum(self._states)
+
+class VisualCluster(NeuralCluster):
+    """A neural cluster for picture inputs."""
+    def __init__(self, num_neur):
+        """Derived class for visual stimuli."""
+        NeuralCluster.__init__(self, "Visual cluster", num_neur)
+
+
+#------------------------------------------------------------------------------
+"""Verifying operations on clusters."""
+
+VIEW = NeuralCluster("Taste cluster", 25)
 print(VIEW)
+VIEW.num_neur = 5
+print(VIEW.energy())
+for i, stat in enumerate(VIEW):
+    if stat == -1:
+        stat = 1
+    VIEW[i] = stat
+print(VIEW[4])
+
+VIEW2 = VisualCluster(16)
+print(VIEW2)
+VIEW2.num_neur = 5
+print(VIEW2.energy())
+for i, stats in enumerate(zip(VIEW, VIEW2)):
+    VIEW2[i] = (stats[1] + stats[0])/2
+print(VIEW2[4])
