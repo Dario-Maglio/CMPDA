@@ -10,7 +10,7 @@ def Hello(pos,name):
 
 def cube(x):
     print ( "I am the first sub-process with ID "
-        +str(os.getpid())+ ' my father is ID:' +str(os.getppid()))
+        + str(os.getpid()) + ' my father is ID:' + str(os.getppid()))
     return x**3
 
 if __name__=='__main__':
@@ -29,10 +29,10 @@ if __name__=='__main__':
     print(results)
 
     # Define a Pool, while .map execute and close the list of processes
-    proc = mp.Pool(processes=5)
-    results = proc.map(cube,range(1,10))
+    proc = mp.Pool(processes=7)
+    results = proc.map(cube,range(1,20))
     print(results)
 
-    pool = mp.Pool(processes=5)
-    results = pool.map_async(cube,range(1,10))
+    pool = mp.Pool(processes=7)
+    results = pool.map_async(cube,range(1,20))
     print(results.get())

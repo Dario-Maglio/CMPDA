@@ -21,5 +21,5 @@ def square_list(input_list):
 # Make sure the function name and docstring look the same
 logging.basicConfig(level=logging.DEBUG)
 logging.info('Logging level set on DEBUG.')
-print('\'{}\': {}'.format(square_list.__name__, square_list.__doc__))
+logging.info('\'{}\': {}'.format(square_list.__name__, square_list.__doc__))
 square_list(range(2000000))

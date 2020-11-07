@@ -4,7 +4,7 @@ import random
 import threading
 import time
 import matplotlib.pyplot as plt
-import numpy 
+import numpy
 
 
 class Timer(object):
@@ -127,6 +127,8 @@ def mp_factorizer(nums, nprocs):
 
     return resultdict
 
+#-------------------------------------------------------------------------------
+
 def plot_results(elapsed):
     plt.rcdefaults()
     fig, ax = plt.subplots()
@@ -139,36 +141,36 @@ def plot_results(elapsed):
     ax.set_xlabel('Elapsed time')
     ax.set_title('Serial, threads, processes comparison')
     plt.show()
-    wait()
+
+#-------------------------------------------------------------------------------
 
 def benchmark(nums):
     print('Running benchmark...')
     elapsed_times=[]
 
-    tserial=Timer('serial')
-    with tserial as qq:
+    tserial=Timer('serial')     #Creating an instance of Time class for serial
+    with tserial as aa:         #Entering the context (aa doesn't mean anything)
         s_d = serial_factorizer(nums)
     elapsed_times.append(tserial.output())
 
     for numparallel in [2, 4, 8]:
         tthread=Timer('threaded %s' % numparallel)
-        with tthread as qq:
+        with tthread as aa:
             t_d = threaded_factorizer(nums, numparallel)
         elapsed_times.append(tthread.output())
         tmpar=Timer('mp %s' % numparallel)
-        with tmpar as qq:
+        with tmpar as aa:
             m_d = mp_factorizer(nums, numparallel)
         elapsed_times.append(tmpar.output())
-    
+
     print (elapsed_times)
     plot_results(elapsed_times)
-    
 
-#MAIN
+#MAIN--------------------------------------------------------------------------
+
 N = 299
-
 nums = [999999999999]
 for i in range(N):
     nums.append(nums[-1] + 2)
-print(nums) 
+print(nums)
 benchmark(nums)
