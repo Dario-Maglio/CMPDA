@@ -1,5 +1,5 @@
 import unittest
-from Sophia.sophia import NeuralCluster, VisualCluster
+from Machine_learning.Sophia.sophia import NeuralCluster, VisualCluster
 
 class TestCore(unittest.TestCase):
     """Test methods class."""
