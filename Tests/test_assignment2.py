@@ -10,7 +10,7 @@ class TestCore(unittest.TestCase):
 
     def tests(self):
         # Load some data
-        t, v = numpy.loadtxt('Assignments/Assignment_2/sample_data_file.txt', unpack=True)
+        t, v = numpy.loadtxt('Python_Basic/Assignment_2/sample_data_file.txt', unpack=True)
         v_data = VoltageData(t, v)
         # Test len()
         assert len(v_data) == len(t)
