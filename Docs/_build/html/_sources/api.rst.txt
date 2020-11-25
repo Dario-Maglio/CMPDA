@@ -1,5 +1,6 @@
-Documentation test
-==================
+Module's documentation
+======================
+
 Sophia module
 -------------
 
@@ -9,5 +10,11 @@ Sophia module
 Assignment 2 module
 -------------------
 
-.. automodule:: Assignments.Assignment_2.assignment_2
+.. automodule:: Python_Basic.Assignment_2.assignment_2
    :members:
+
+Smartsquare module
+-------------------
+
+.. automodule:: Python_Basic.Assignment_2.assignment_2
+      :members:

@@ -8,9 +8,8 @@ import matplotlib.pyplot as plt
 
 
 def process(file_path):
-
     """Prepares the working copy of the file."""
-    switch = input('Change the beginning and the ending of the text?(S/n) ')
+    switch = input('Change the begin and the end of the text?(S/n) ')
     if switch == 'S':
         start = int(input('From which line do you want to start?  '))
         end = int(input('At which line do you want to stop? '))
@@ -22,25 +21,24 @@ def process(file_path):
         start = 1
         end = 0
 
-    logging.info(f'Reading input file {file_path}...')
+    logger.info(f'Reading input file {file_path}...')
     with open(file_path) as input_file:
         i = 1
         while i < start:
             i += 1
             input_file.readline()
-        logging.info(f'The starting line is {i}.')
-        with open('workfile.txt', 'w') as workfile:
-            while True:
-                i += 1
-                line = input_file.readline()
-                workfile.write(line)
-                if (i == end + 1) or (line == ''):
-                    break
-    num_lines = i - start
+        logger.info(f'The starting line is {i}.')
+        text = []
+        while True:
+            i += 1
+            line = input_file.readline()
+            text.append(line)
+            if (i == end + 1) or (line == ''):
+                break
+        logger.info(f'The last line is {i - 1}.')
+        text = ''.join(text)
+        num_lines = i - start
 
-    with open('workfile.txt', 'r') as workfile:
-        text = workfile.read()
-    logging.info('The working copy is ready.')
     start_time = time.time()
 
     """Creats a dictionary of letter frequencies and counts the words."""
@@ -81,9 +79,16 @@ if __name__ == "__main__":
     PARSER.add_argument('-v', '--verbose', action='store_true', help='DEBUG')
     ARGS = PARSER.parse_args()
 
+    logger = logging.getLogger("LocalLog")
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.DEBUG)
+    formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+    ch.setFormatter(formatter)
+    logger.addHandler(ch)
+
     if ARGS.verbose:
-        logging.basicConfig(level=logging.DEBUG)
-        logging.info('Logging level set on DEBUG.')
+        logger.setLevel(logging.DEBUG)
+        logger.info('Logging level set on DEBUG.')
 
     STATE = process(ARGS.inpfile)
     if STATE == 1:

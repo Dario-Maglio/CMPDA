@@ -1,4 +1,4 @@
-"""Third assignment: parallel programming."""
+"""Assignment: parallel programming."""
 
 import argparse
 import logging
@@ -17,7 +17,7 @@ def clocked(func):
         tstart = time.time()
         result = func(*args, **kwargs)
         exec_time = time.time() - tstart
-        logging.info(f'Function {func.__name__} executed in {exec_time} s\n')
+        logger.info(f'Function {func.__name__} executed in {exec_time} s\n')
         elapsed_times.append(exec_time)
         return result
     return wrapper
@@ -149,9 +149,16 @@ if __name__ == "__main__":
     PARSER.add_argument('-v', '--verbose', action='store_true', help='DEBUG')
     ARGS = PARSER.parse_args()
 
+    logger = logging.getLogger("LocalLog")
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.DEBUG)
+    formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+    ch.setFormatter(formatter)
+    logger.addHandler(ch)
+
     if ARGS.verbose:
-        logging.basicConfig(level=logging.DEBUG)
-        logging.info('Logging level set on DEBUG.')
+        logger.basicConfig(level=logging.DEBUG)
+        logger.info('Logging level set on DEBUG.')
 
     N = 9
     elapsed_times = []     # Global elapsed_times list to wrap functions
@@ -179,7 +186,6 @@ if __name__ == "__main__":
         print('Output from the multithreading method:\n', outlist)
     print('#-----------------------------------------------------------------#')
 
-    #logging.setLevel(level=30) #Why it doesn't work?------------
-    logging.info(elapsed_times)
+    logger.info(elapsed_times)
     plot_results(elapsed_times, labels)
     print('The work is done.')

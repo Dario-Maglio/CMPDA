@@ -3,7 +3,7 @@
 import numpy
 import unittest
 from matplotlib import pyplot as plt
-from Assignments.Assignment_2.assignment_2 import VoltageData
+from Python_Basic.Assignment_2.assignment_2 import VoltageData
 
 class TestCore(unittest.TestCase):
     """Test methods class."""
