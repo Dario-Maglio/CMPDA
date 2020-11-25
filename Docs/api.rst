@@ -16,5 +16,5 @@ Assignment 2 module
 Smartsquare module
 -------------------
 
-.. automodule:: Python_Basic.Assignment_2.assignment_2
+.. automodule:: Python_Basic.Python_practice.smartsquare
       :members:
