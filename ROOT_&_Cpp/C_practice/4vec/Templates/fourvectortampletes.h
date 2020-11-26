@@ -6,26 +6,27 @@
 template <class type>
 class FourVector {
 public:
+  FourVector() {}
   FourVector(type px, type py, type pz, type e) :
     px_(px), py_(py), pz_(pz), e_(e) {}
 
-  type get_px() {return px_;}
-  type get_py() {return py_;}
-  type get_pz() {return pz_;}
-  type get_E() {return e_;}
+  type get_px() const {return px_;}
+  type get_py() const {return py_;}
+  type get_pz() const {return pz_;}
+  type get_E() const {return e_;}
 
   void set_px(type x) {px_ = x;}
   void set_py(type x) {py_ = x;}
   void set_pz(type x) {pz_ = x;}
   void set_e(type x) {e_ = x;}
 
-  type pt(){return sqrt(px_*px_ + py_*py_ + pz_*pz_);}
-  type mass(){return sqrt(e_*e_ - (px_*px_ + py_*py_ + pz_*pz_));}
+  type pt() const {return sqrt(px_*px_ + py_*py_ + pz_*pz_);}
+  type mass() const {return sqrt(e_*e_ - (px_*px_ + py_*py_ + pz_*pz_));}
 
   template <class type2>
-  operator FourVector<type2>() {return FourVector<type2>(px_,py_,pz_,e_);}
+  operator FourVector<type2>() const {return FourVector<type2>(px_,py_,pz_,e_);}
 
-  FourVector operator + (FourVector<type> other) {
+  FourVector operator + (const type &other) {
     return FourVector<type> (px_ + other.get_px(), py_ + other.get_py(),
                             pz_ + other.get_pz(), e_ + other.get_E());}
 
