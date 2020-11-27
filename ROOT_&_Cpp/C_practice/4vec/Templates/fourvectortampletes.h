@@ -2,9 +2,14 @@
 #define FILE_H
 #include <math.h>
 #include <iostream>
+#include <string>
 
 template <class type>
 class FourVector {
+
+private:
+  type px_, py_, pz_, e_;
+
 public:
   FourVector() {}
   FourVector(type px, type py, type pz, type e) :
@@ -24,17 +29,18 @@ public:
   type mass() const {return sqrt(e_*e_ - (px_*px_ + py_*py_ + pz_*pz_));}
 
   template <class type2>
-  operator FourVector<type2>() const {return FourVector<type2>(px_,py_,pz_,e_);}
+  operator FourVector<type2> () const {
+    return FourVector<type2>(px_, py_, pz_, e_);
+  }
 
-  FourVector operator + (const type &other) {
+  FourVector operator + (const FourVector<type> &other) {
     return FourVector<type> (px_ + other.get_px(), py_ + other.get_py(),
-                            pz_ + other.get_pz(), e_ + other.get_E());}
+                             pz_ + other.get_pz(), e_ + other.get_E());
+  }
 
-  FourVector operator * (type scl) {
-    return FourVector<type> (px_*scl, py_*scl, pz_*scl, e_*scl);}
-
-private:
-  type px_, py_, pz_, e_;
+  FourVector operator * (const type &scl) {
+    return FourVector<type> (px_*scl, py_*scl, pz_*scl, e_*scl);
+  }
 };
 
 
@@ -42,21 +48,39 @@ private:
 template <class type>
 class Particle : public FourVector<type> {
 
-public:
-  Particle(const char* ID, type charge, const FourVector<type> & p4):
-    FourVector<type>(p4), charge_(charge), ID_(ID) {}
+private:
+  int charge_;
+  const std::string ID_;
 
-  const char* get_name() {return ID_;}
-  type get_charge() {return charge_;}
-  void print(){
-    std::cout<<"The particle with name "<< Particle<type>::get_name() <<
-    " has mass "<<FourVector<type>::mass()<<" and charge "<<charge_<<std::endl;
+public:
+  Particle(const std::string &ID, int charge, const FourVector<type> &p4):
+           FourVector<type>(p4), charge_(charge), ID_(ID) {}
+
+  std::string get_name() const {return ID_;}
+  int get_charge() const {return charge_;}
+  FourVector<type> get_vect() const {
+    return FourVector<type>(FourVector<type>::get_px(), FourVector<type>::get_py(),
+                            FourVector<type>::get_pz(), FourVector<type>::get_E());
   }
 
-private:
-  type charge_;
-  const char* ID_;
+  template <class type2>
+  operator Particle<type2> () const {
+    return Particle<type2>(ID_, charge_, get_vect());
+  }
 
+  operator FourVector<type>() const {
+    return get_vect();
+  }
+
+  Particle operator + (const Particle<type> &other) {
+    return Particle<type> ("Sum of two particles", charge_ + other.get_charge(),
+                           get_vect() + other.get_vect());
+  }
+
+  void print() {
+    std::cout<<"The "<<ID_<<"particle has mass "<<FourVector<type>::mass()<<
+                " and charge "<<charge_<<std::endl;
+  }
 };
 
 #endif
