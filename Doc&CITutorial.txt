@@ -7,6 +7,7 @@ make html to compile the Makefile
 cp _templates/layout.html e cambia il titolo in mezzo
 cp _static/default.css
 create api.rst
+write api in index.rst
 modify conf.py
     extensions = ['sphinx.ext.autodoc']
     e scommentare 3 righe di os e sys
