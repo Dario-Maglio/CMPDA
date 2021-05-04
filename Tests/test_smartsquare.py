@@ -2,7 +2,7 @@
 
 import unittest
 
-from Python_Basic.Python_practice.smartsquare import square
+from Python_SciPy.Python_practice.smartsquare import square
 
 class TestCore(unittest.TestCase):
     """Test methods class."""

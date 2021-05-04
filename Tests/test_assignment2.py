@@ -3,14 +3,14 @@
 import numpy
 import unittest
 from matplotlib import pyplot as plt
-from Python_Basic.Assignment_2.assignment_2 import VoltageData
+from Python_SciPy.Assignment_2.assignment_2 import VoltageData
 
 class TestCore(unittest.TestCase):
     """Test methods class."""
 
     def tests(self):
         # Load some data
-        t, v = numpy.loadtxt('Python_Basic/Assignment_2/sample_data_file.txt', unpack=True)
+        t, v = numpy.loadtxt('Python_SciPy/Assignment_2/sample_data_file.txt', unpack=True)
         v_data = VoltageData(t, v)
         # Test len()
         assert len(v_data) == len(t)
