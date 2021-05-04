@@ -1,7 +1,7 @@
-Dario-Caf repository for the cmpeda course (UniPi)
-==================================================
+Computing methods for physics and data analysis
+===============================================
 
-[![Build Status](https://travis-ci.com/Dario-Caf/Dario_CMPDA.svg?branch=main)](https://travis-ci.com/Dario-Caf/Dario_CMPDA)
+[![Build Status](https://travis-ci.com/Dario-Caf/CMPDA.svg?branch=main)](https://travis-ci.com/Dario-Caf/CMPDA)
 [![Documentation Status](https://readthedocs.org/projects/cmpda/badge/?version=latest)](https://cmpda.readthedocs.io/en/latest/?badge=latest)
 
-Personal repository of the cmpeda course (UniPi).
+Personal repository
