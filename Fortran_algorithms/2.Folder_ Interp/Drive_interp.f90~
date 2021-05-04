@@ -1,0 +1,43 @@
+Program Drive_interp
+
+ Use LibraryInterp                                                  !Carica file library
+ 
+ Implicit none
+ integer(4), Parameter::N=18,M=100
+ Real(rk), Parameter::a=0._rk,b=pi,a2=-pi,b2=2._rk*pi
+ Integer(4)::i
+ Real(rk)::x(0:N),y(0:N),x0,y0l,y0a,y0u,tl,ta,tu,t1,t2,t3,t4  !Def vettori con i da 0 a N
+
+ Do i=0,N
+    x(i)=a+i*(b-a)/N                                          !Suddivisione dell'intervallo zero b-a in N parti
+ End do
+ y=sin(x)                                                        !Chiamo funzione e ci carico un vettore dandogli vettore  
+
+ tl=0._rk
+ ta=0._rk
+ tu=0._rk
+ 
+ Open (1,file='interp.dat')
+ Do i=0,M
+    x0=a2+i*(b2-a2)/N                                         !Suddivisione dell'intervallo b2-a2 in M parti
+    Call cpu_time(t1)                                         !Sub si chiama con call
+    Call interp(x,y,x0,y0l,'lagrange')                        !Sub si prende titolo, numero di variabili e tipo
+    Call cpu_time(t2)
+    Call interp(x,y,x0,y0a,'aitken')
+    Call cpu_time(t3)                                         !cpu_time prende i secondi passati da un momento lontano nel passato
+    Call interp(x,y,x0,y0u,'updown')
+    Call cpu_time(t4)
+    tl=tl+(t2-t1)                                             !Somma tempi per eseguire operazioni ad ogni passo
+    ta=ta+(t3-t2)
+    tu=tu+(t4-t3)
+    write(1,'(I4,5(x,E19.12))')i,x0,sin(x0),y0l,y0a,y0u
+    write(*,'(I4,5(x,E19.12))')i,x0,sin(x0),y0l,y0a,y0u
+ End do
+ 
+ close(1)
+ 
+ print *,'Lagrange used',tl,'seconds'
+ print *,'Aitken used',ta,'seconds'
+ print *,'Updown used',tu,'seconds'
+ 
+End Program Drive_interp

@@ -1,0 +1,2413 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Title
+Doppio pendolo smorzato
+\end_layout
+
+\begin_layout Author
+Giuseppe De Maria
+\begin_inset Newline newline
+\end_inset
+
+Dario Cafasso
+\begin_inset Newline newline
+\end_inset
+
+Carmine De Rosa
+\begin_inset Newline newline
+\end_inset
+
+Pietro Pellecchia
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Descrizione del sistema
+\end_layout
+
+\begin_layout Standard
+Il presente lavoro di tesi tratta l'evoluzione dinamica di un sistema costituito
+ da un pendolo doppio in presenza di attrito viscoso, analizzando i cambiamenti
+ che subisce la dinamica dello stesso al variare dei parametri fondamentali
+ che lo caratterizzano.
+ Siano 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ le masse dei due punti materiali disposte come in figura:
+\end_layout
+
+\begin_layout Standard
+
+\lang italian
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\lang italian
+\begin_inset Graphics
+	filename grafici/Schermata del 2018-06-08 17-47-00.png
+	lyxscale 200
+	scale 80
+	clip
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Rappresentazione del sistema in esame
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le grandezze fondamentali del nostro sistema sono:
+\end_layout
+
+\begin_layout Itemize
+l'accelerazione gravitazionale g=9,81 m/
+\begin_inset Formula $s^{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+la lunghezza delle aste 
+\begin_inset Formula $l_{1}=l_{2}=l$
+\end_inset
+
+ misurate in metri ;
+\end_layout
+
+\begin_layout Itemize
+le masse 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ msurate in kg;
+\end_layout
+
+\begin_layout Itemize
+il coefficiente di attrito viscoso 
+\begin_inset Formula $\beta$
+\end_inset
+
+ misurato in Ns/m.
+\end_layout
+
+\begin_layout Standard
+Studiamo il sistema in linguaggio lagrangiano e introduciamo le coordinate
+ generalizzate 
+\begin_inset Formula $\theta$
+\end_inset
+
+ e 
+\begin_inset Formula $\phi$
+\end_inset
+
+, così da ottenere le seguenti equazioni di trasformazione:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left\{ \begin{array}{l}
+x_{1}=lsinθ\\
+y_{1}=lcosθ\\
+x_{2}=l(sinθ+sin\phi)\\
+y_{2}=l(cosθ+cos\phi)
+\end{array}\right.\label{eq:1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+dove 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ sono le coordinate cartesiane relative alla massa 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+, mentre 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ e 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ sono le coordinate cartesiane relative alla massa 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Otteniamo la seguente lagrangiana:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+L=\frac{1}{2}m_{1}l^{2}\dot{\theta}^{2}+\frac{1}{2}m_{2}l^{2}(\dot{\theta}^{2}+\dot{\phi}^{2}+2cos(\theta-\phi)\dot{\theta}\dot{\phi})+m_{1}glcos\theta+m_{2}gl(cos\theta+cos\phi)
+\end{equation}
+
+\end_inset
+
+Dal sistema di equazioni di Lagrange
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+\frac{d}{dt}\frac{∂L}{\partial\dot{\theta}}-\frac{\partial L}{\partial\theta}=Q_{\theta}\\
+\frac{d}{dt}\frac{\text{\ensuremath{\partial}}L}{\partial\dot{\phi}}-\frac{\partial L}{\partial\phi}=Q_{\phi}
+\end{cases}
+\end{equation}
+
+\end_inset
+
+dove 
+\begin_inset Formula $Q_{\theta}$
+\end_inset
+
+ e 
+\begin_inset Formula $Q_{\phi}$
+\end_inset
+
+ sono le forze generalizzate
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+Q_{\theta}=2\beta l^{2}\dot{\theta}+\beta l^{2}cos(\theta-\phi)\dot{\phi}\\
+Q_{\phi}=\beta l^{2}\dot{\phi}+\beta l^{2}cos(\theta-\phi)\dot{\theta}
+\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+si ottengono le seguenti equazioni del moto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+\ddot{\theta}=D-A-C-B\left(\frac{H-E-G-F(D-A-C)}{1-FB}\right)\\
+\ddot{\phi}=\frac{H-E-G-F(D-A-C)}{1-FB}
+\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dove 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{array}{ll}
+A=\frac{m_{2}}{m_{1}+m_{2}}(\dot{\phi}^{2}-\dot{\theta}\dot{\phi})sin(\theta-\phi) & \,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,E=(\dot{\theta}\dot{\phi}-\dot{\theta}^{2})sin(\theta-\phi)\\
+B=\frac{m_{2}}{m_{1}+m_{2}}cos(\theta-\phi) & \,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,F=cos(\theta-\phi)\\
+C=\frac{g}{l}sin\theta & \,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,G=\frac{g}{l}sin\phi\\
+D=-\frac{\beta}{m_{1}+m_{2}}(2\dot{\theta}+cos(\theta-\phi)\dot{\phi}) & \,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,H=-\frac{\beta}{m_{2}}[\dot{\phi}+cos(\theta-\phi)\dot{\theta}]
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Analisi numerica
+\end_layout
+
+\begin_layout Standard
+L'analisi numerica del sistema è svolta in una finestra di osservazione
+ di T=30 secondi, fissando i parametri:
+\end_layout
+
+\begin_layout Itemize
+l=0,5 m;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\beta$
+\end_inset
+
+=0,5 Ns/m, che è il coefficiente d'attrito viscoso;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m_{1}$
+\end_inset
+
+=2 kg e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+=3,5 kg;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\theta_{o}=\pi/3$
+\end_inset
+
+ rad e 
+\begin_inset Formula $\phi_{o}=-\pi/2$
+\end_inset
+
+ rad, che sono gli angoli iniziali;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\dot{\theta}_{0}=\dot{\phi}_{o}=0$
+\end_inset
+
+ rad/s, che sono le velocità angolari iniziali.
+\end_layout
+
+\begin_layout Standard
+e scelto un passo di 
+\begin_inset Formula $2\cdot10^{-7}$
+\end_inset
+
+ secondi.
+ La scelta di questo passo è dovuta ad un'analisi fatta sui valori degli
+ angoli ottenuti al tempo finale, al variare del passo.
+ L'analisi, in particolare, consiste nello scegliere un passo minimo 
+\begin_inset Formula $\triangle_{min}$
+\end_inset
+
+, valutare gli angoli al tempo finale con quel passo e assumerli come valor
+ vero, far variare il passo ottenendo valori diversi e graficare il valore
+ assoluto della differenza fra questi ultimi e il valore vero
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+|\theta_{i}(T,\triangle)-\theta(T,\triangle_{min})|
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+|\phi_{i}(T,\triangle)-\phi(T,\triangle_{min})|
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Infine, dall'andamento del grafico possiamo dedurre se ci stiamo muovendo
+ sulla curva dell'errore algoritmico o sulla curva dell'errore numerico.
+ 
+\end_layout
+
+\begin_layout Standard
+Inizialmente abbiamo assunto come valore vero l'angolo corrispondente a
+ un 
+\begin_inset Formula $\triangle_{min}=1\cdot10^{-7}$
+\end_inset
+
+; abbiamo fatto variare poi il passo ottenendo nuovi valori degli angoli
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+ e 
+\begin_inset Formula $\phi$
+\end_inset
+
+; usando poi le formule (6) e (7), abbiamo ottenuto i seguenti dati:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Passo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\epsilon_{\theta}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\epsilon_{\phi}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1\cdot10^{-7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2\cdot10^{-7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.679356816566
+\begin_inset Formula $\cdot10^{-7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.163825220917
+\begin_inset Formula $\cdot10^{-6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3\cdot10^{-7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7785326561387
+\begin_inset Formula $\cdot10^{-7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.196745623987
+\begin_inset Formula $\cdot10^{-6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3,8\cdot10^{-7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.981169974712
+\begin_inset Formula $\cdot10^{-7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.236633964840
+\begin_inset Formula $\cdot10^{-6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5,1\cdot10^{-7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.135861782401
+\begin_inset Formula $\cdot10^{-6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.327649852888
+\begin_inset Formula $\cdot10^{-6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6\cdot10^{-7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.158513106179
+\begin_inset Formula $\cdot10^{-6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.382260198939
+\begin_inset Formula $\cdot10^{-6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8\cdot10^{-7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.203811021535
+\begin_inset Formula $\cdot10^{-6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.491480281251
+\begin_inset Formula $\cdot10^{-6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Valori degli errori a differenti passi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quindi, graficando l'errore in funzione del passo, i grafici ottenuti per
+ le due coordinate sono rispettivamente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename grafici/Errore.png
+	lyxscale 90
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Grafici degli errori in funzione del passo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Come si nota, le curve sono monotone crescenti; ciò vuol dire che scegliendo
+ come valor vero il risultato ottenuto con un passo 
+\begin_inset Formula $\triangle_{min}=1\cdot10^{-7}$
+\end_inset
+
+, il numero di passi N che compio non è tanto grande da far sì che questo
+ sia completamente affetto da errore numerico, il quale mi darebbe una dinamica
+ del sistema completamente sbagliata.
+ A questo punto, abbiamo scelto come errore che vogliamo commettere 
+\begin_inset Formula $\bar{\epsilon}=2\cdot10^{-7}$
+\end_inset
+
+e di conseguenza il passo scelto è 
+\begin_inset Formula $\bar{\triangle}=2\cdot10^{-7}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il grafico seguente mostra quanto appena detto :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename grafici/Errore scelto.png
+	lyxscale 90
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Errore e passo scelti
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Casistica
+\end_layout
+
+\begin_layout Standard
+Fissando i parametri caratteristici del sistema con gli stessi valori con
+ cui è stata svolta l'analisi numerica del paragrafo precedente, abbiamo
+ graficato l'evoluzione temporale delle nostre coordinate generalizzate,
+ ottenendo i seguenti grafici:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Casistica/Normale/Coordinate.png
+	lyxscale 90
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dinamica delle coordinate 
+\begin_inset Formula $\theta(t)$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $\phi(t)$
+\end_inset
+
+ (in azzurro)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Attraverso le equazioni di trasformazione (1)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\{ \begin{array}{l}
+x_{1}=lsin\theta\\
+y_{1}=lcos\theta\\
+x_{2}=l(sin\theta+sin\phi)\\
+y_{2}=l(cos\theta+cos\phi)
+\end{array}\right.
+\]
+
+\end_inset
+
+ci siamo ricondotti alle coordinate cartesiane, potendo così graficare la
+ curva 
+\begin_inset Formula $y(x)$
+\end_inset
+
+ che descrive la traiettoria del moto e una rappresentazione che mette in
+ evidenza come varia l'andamento del doppio pendolo con l'avanzare del tempo
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Casistica/Normale/y(x).png
+	lyxscale 90
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+moto delle masse 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+(in azzurro) in 2 dimensioni 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Casistica/Normale/Rapp.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+evoluzione temporale del moto delle masse 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+(in azzurro) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il sistema che abbiamo scelto di studiare rappresenta un particolare esempio
+ di moto caotico, ossia caratterizzato da variazioni enormi nella dinamica
+ in seguito a piccole modifiche delle condizioni iniziali.
+ Prendendo gli stessi parametri del grafico precedente (
+\begin_inset Formula $\theta_{0}=\frac{\pi}{3}$
+\end_inset
+
+, 
+\begin_inset Formula $\phi_{0}=-\frac{\pi}{2}$
+\end_inset
+
+) e modificando l'angolo 
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+ facendogli assumere il valore 
+\begin_inset Formula $\frac{\pi}{4}$
+\end_inset
+
+ otteniamo la seguente dinamica: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Casistica/Normale/1.png
+	lyxscale 70
+	scale 35
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Casistica/Normale/13d.png
+	lyxscale 70
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A sinistra moto delle masse 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ (in azzurro) in 2 dimensioni; a destra il moto delle masse nell'avanzare
+ del tempo.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Abbiamo modificato poi il valore di 
+\begin_inset Formula $\phi_{0}$
+\end_inset
+
+, ponendolo a 
+\begin_inset Formula $-\frac{\pi}{3}$
+\end_inset
+
+; la dinamica che ne consegue è la seguente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Casistica/Normale/2.png
+	lyxscale 70
+	scale 35
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Casistica/Normale/23d.png
+	lyxscale 70
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A sinistra moto delle masse 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ (in azzurro) in 2 dimensioni; a destra la dinamica delle masse nel tempo.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Come si nota, le due dinamiche, in particolare quella relativa alla massa
+ 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+, sono completamente sconnesse; questo conferma quanto detto in precedenza.
+\end_layout
+
+\begin_layout Standard
+Risulta quindi evidente che modificando le grandezze fondamentali abbiamo
+ variazioni interessanti della dinamica del nostro sistema.
+ Osserviamo alcuni casi particolari
+\end_layout
+
+\begin_layout Subsection*
+Caso m1>>m2
+\end_layout
+
+\begin_layout Standard
+Nel caso in cui la massa del primo pendolo è molto maggiore di quella del
+ secondo, osserviamo che 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ segue una dinamica quasi indipendente da quella di 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+, mentre 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ è fortemente influenzata dalla dinamica di 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+.
+ Fissando i parametri nel modo seguente:
+\end_layout
+
+\begin_layout Itemize
+l=0,5 m;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\beta$
+\end_inset
+
+=0,5 Ns/m;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m_{1}$
+\end_inset
+
+=200 kg e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+=3,5 kg;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\theta_{o}=\pi/8$
+\end_inset
+
+ rad e 
+\begin_inset Formula $\phi_{o}=\pi/4$
+\end_inset
+
+ rad;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\dot{\theta}_{0}=\dot{\phi}_{o}=0$
+\end_inset
+
+ rad/s.
+\end_layout
+
+\begin_layout Standard
+la dinamica che ne consegue è rappresentata nei seguenti grafici:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Casistica/A>>B/A>>B.png
+	lyxscale 70
+	scale 40
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Casistica/A>>B/A>>B e phi fa cose strane,6-3.png
+	lyxscale 70
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A sinistra moto delle masse 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ (in azzurro) in 2 dimensioni; a destra la dinamica delle coordinate 
+\begin_inset Formula $\theta(t)$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $\phi(t)$
+\end_inset
+
+ (in azzurro)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Come si può notare il moto della massa 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ è del tutto caotico, mentre la dinamica della massa 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ è quasi indipendente dalla dinamica della massa 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Cambiamo ora gli angoli iniziali, fissandoli allo stesso valore in radianti
+ e lasciando invariati i parametri restanti,
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\theta_{o}=\pi/3$
+\end_inset
+
+ rad e 
+\begin_inset Formula $\phi_{o}=\pi/3$
+\end_inset
+
+ rad;
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La dinamica che ne consegue è rappresentata nei seguenti grafici:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Casistica/A>>B/A>>B angoli uguali.png
+	lyxscale 70
+	scale 40
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Casistica/A>>B/A>>B e angoli uguali-3.png
+	lyxscale 70
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A sinistra moto delle masse 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+(in azzurro) in 2 dimensioni; a destra la dinamica delle coordinate 
+\begin_inset Formula $\theta(t)$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $\phi(t)$
+\end_inset
+
+ (in azzurro)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Come si può notare la massa 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ sembra essere soggetta al fenomeno di risonanza, come se la massa 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+svolgesse il ruolo di una forzante per la dinamica della massa 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Caso m2>>m1
+\end_layout
+
+\begin_layout Standard
+Nel caso in cui la massa del secondo pendolo è molto maggiore di quella
+ del primo, osserviamo che la situazione si è capovolta, ossia la dinamica
+ è determinata principalmente dalla massa 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+, menre la massa 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ è costretta a seguirla.
+ Fissando i parametri nel modo seguente:
+\end_layout
+
+\begin_layout Itemize
+l=0,5 m;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\beta$
+\end_inset
+
+=0,5 Ns/m;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m_{1}$
+\end_inset
+
+=2 kg e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+=300,5 kg;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\theta_{o}=\pi/10$
+\end_inset
+
+ rad e 
+\begin_inset Formula $\phi_{o}=\pi/6$
+\end_inset
+
+ rad;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\dot{\theta}_{0}=\dot{\phi}_{o}=0$
+\end_inset
+
+ rad/s.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+la dinamica che ne consegue è rappresentata nei seguenti grafici:
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Casistica/B>>A/B>>A pi-4 2.png
+	lyxscale 70
+	scale 40
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename Casistica/B>>A/B>>A pi-4.png
+	lyxscale 70
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+In alto il moto delle masse 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ (in azzurro) in 2 dimensioni; in basso la dinamica delle coordinate 
+\begin_inset Formula $\theta(t)$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $\phi(t)$
+\end_inset
+
+ (in azzurro)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sotto questa condizione, la coordinata generalizzata 
+\begin_inset Formula $\phi$
+\end_inset
+
+ relativa alla massa 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ segue una dinamica totalmente indipendente da quella della coordinata 
+\begin_inset Formula $\theta$
+\end_inset
+
+ relativa alla massa 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+, la quale, essendo costretta a seguire la dinamica della massa 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+, esegue delle oscillazioni caotiche che si ripercuotono sulla coordinata
+ 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ della massa 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Cambiamo ora gli angoli iniziali, fissandoli allo stesso valore in radianti
+ e lasciando invariati i parametri restanti
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\theta_{o}=\pi/3$
+\end_inset
+
+ rad e 
+\begin_inset Formula $\phi_{o}=\pi/3$
+\end_inset
+
+ rad;
+\end_layout
+
+\begin_layout Standard
+la dinamica del sistema cambia.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il moto è rappresentato nei seguenti grafici:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Casistica/B>>A/B>>A e angoli uguali2.png
+	lyxscale 70
+	scale 40
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Casistica/B>>A/B>>A e angoli uguali.png
+	lyxscale 70
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A sinistra moto delle masse 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ (in azzurro) in 2 dimensioni; a destra la dinamica delle coordinate 
+\begin_inset Formula $\theta(t)$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $\phi(t)$
+\end_inset
+
+ (in azzurro)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Come si può notare questa particolare condizione fa sì che la dinamica del
+ doppio pendolo possa essere approssimata a quella di un singolo pendolo
+ con asta di lunghezza 2l e massa 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+; questo comportamento è dovuto al fatto che la massa 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ non ha effetti rilevanti sulla dinamica complessiva del sistema e quindi,
+ partendo dallo stesso angolo iniziale, segue perfettamente il moto della
+ massa 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Caso m2 = m1
+\end_layout
+
+\begin_layout Standard
+Nel caso in cui le masse hanno lo stesso valore, osserviamo due sottocasi
+ particolari.
+ Il primo è quello in cui gli angoli di partenza sono uguali e il secondo
+ è quello in cui sono uguali e opposti.
+\end_layout
+
+\begin_layout Standard
+Fissando i parametri nel modo seguente:
+\end_layout
+
+\begin_layout Itemize
+l=0,5 m;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\beta$
+\end_inset
+
+=0,5 Ns/m;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m_{1}$
+\end_inset
+
+=2 kg e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+=2 kg;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\theta_{o}=\pi/3$
+\end_inset
+
+ rad e 
+\begin_inset Formula $\phi_{o}=\pi/3$
+\end_inset
+
+ rad;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\dot{\theta}_{0}=\dot{\phi}_{o}=0$
+\end_inset
+
+ rad/s.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La dinamica che ne consegue è rappresentata nei seguenti grafici:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Casistica/A==B/uguali.png
+	lyxscale 70
+	scale 45
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Casistica/A==B/A=B e theta=phi.png
+	lyxscale 70
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A sinistra moto delle masse 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ (in azzurro) in 2 dimensioni; a destra la dinamica delle coordinate 
+\begin_inset Formula $\theta(t)$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $\phi(t)$
+\end_inset
+
+ (in azzurro)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il moto risente parecchio dell'effetto smorzante e la dinamica non presenta
+ caratteristiche particolari oltre al fatto che i due pendoli oscillano
+ con la stessa frequenza.
+\end_layout
+
+\begin_layout Standard
+Cambiamo ora gli angoli iniziali ponendoli uguali ma opposti
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\theta_{o}=\pi/3$
+\end_inset
+
+ rad e 
+\begin_inset Formula $\phi_{o}=-\pi/3$
+\end_inset
+
+ rad;
+\end_layout
+
+\begin_layout Standard
+la dinamica che ne consegue è rappresentata nei seguenti grafici.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Casistica/A==B/opposti2.png
+	lyxscale 70
+	scale 45
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Casistica/A==B/A=B e theta=-phi.png
+	lyxscale 70
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A sinistra moto delle masse 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ (in azzurro) in 2 dimensioni; a destra la dinamica delle coordinate 
+\begin_inset Formula $\theta(t)$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $\phi(t)$
+\end_inset
+
+ (in azzurro)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Risulta interessante osservare che la frequenza di oscillazione delle masse
+ è molto più grande rispetto al caso precedente e che il moto della seconda
+ massa sull'asse delle x è limitato in un intervallo molto più stretto dei
+ casi precedenti a causa del fatto che si muove in opposizione ad 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Caso 
+\series medium
+
+\begin_inset Formula $\beta>>1$
+\end_inset
+
+Ns/m e 
+\begin_inset Formula $\beta=0$
+\end_inset
+
+ Ns/m 
+\end_layout
+
+\begin_layout Standard
+Concentrandoci invece sul valore del coefficiente d'attrito viscoso e fissando
+ i parametri nel modo seguente:
+\end_layout
+
+\begin_layout Itemize
+l=0,5 m;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\beta$
+\end_inset
+
+=4 Ns/m e ;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m_{1}$
+\end_inset
+
+=2 kg e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+=3,5 kg;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\theta_{o}=\pi/3$
+\end_inset
+
+ rad e 
+\begin_inset Formula $\phi_{o}=-\pi/4$
+\end_inset
+
+ rad;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\dot{\theta}_{0}=\dot{\phi}_{o}=0$
+\end_inset
+
+ rad/s.
+\end_layout
+
+\begin_layout Standard
+la dinamica che ne consegue è rappresentata nei seguenti grafici.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Casistica/b grande/Schermata del 2018-06-20 15-32-16.png
+	lyxscale 70
+	scale 35
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Casistica/b grande/Schermata del 2018-06-20 15-15-57.png
+	lyxscale 70
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A sinistra moto delle masse 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ (in azzurro) in 2 dimensioni; a destra la dinamica delle coordinate 
+\begin_inset Formula $\theta(t)$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $\phi(t)$
+\end_inset
+
+ (in azzurro)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si nota che la dinamica di questo caso differisce dalle altre soltanto per
+ il tempo di smorzamento, in quanto tutte le altre caratteristiche della
+ dinamica dipendono dalle variazioni delle altre grandezze fondamentali
+ del sistema, già analizzate nei casi precedenti; in particolare, nel grafico
+ a destra notiamo che, nonostante gli angoli iniziali siano ampi e opposti,
+ il moto si smorza in pochi secondi; nel grafico a sinistra è invece evidente
+ il regime caotico che governa il sistema, soprattutto sulla massa 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ che compie delle oscillazioni del tutto incontrollate.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cambiamo il valore del coefficiente di attrito, fissandolo a zero e lasciando
+ invariati gli altri parametri, i grafici della dinamica sono :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Casistica/b grande/0attrito moto.png
+	lyxscale 70
+	scale 45
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Casistica/b grande/0attrito angoli.png
+	lyxscale 70
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+A sinistra moto delle masse 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ (in azzurro) in 2 dimensioni; a destra la dinamica delle coordinate 
+\begin_inset Formula $\theta(t)$
+\end_inset
+
+ (in viola) e 
+\begin_inset Formula $\phi(t)$
+\end_inset
+
+ (in azzurro)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il calcolo numerico, conferma le nostre aspettative: ponendo 
+\begin_inset Formula $\beta=0$
+\end_inset
+
+, il moto è in assenza di attrito viscoso e quindi in assenza di smorzamento;
+ il moto si riduce ad una successione di oscillazioni casuali, fortemente
+ dipendenti dalle 
+\end_layout
+
+\begin_layout Standard
+condizioni iniziali.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+Meccanica classica - Herbert Goldstein, Charles Poole, John Safko
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+An Introduction to Computational Physics - Tao Pang
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+Fisica.
+ Meccanica e termodinamica - Corrado Mencuccini, Vittorio Silvestrini
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-5"
+
+\end_inset
+
+Fisica Teorica 1.
+ Meccanica – Lev D.
+ Landau 
+\end_layout
+
+\end_body
+\end_document

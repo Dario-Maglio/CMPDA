@@ -1,0 +1,23 @@
+Program Piano_Tasse
+  
+  Use LibraryDer
+  
+  Implicit None
+  Real(rk), Parameter::a=0._rk,b=pi
+  Real(rk), Allocatable:: x(:), y(:)                    !Vettori di lunghezza variabile
+  Real(rk) ::integr_s
+  Integer(rk) :: i,N
+
+  open (1,file='Int.dat')
+  Do N=2,10000,2
+     Allocate(x(0:N),y(0:N))                            !Alloca spazio in memoria per array dinamici
+     Forall (i=0: N) x(i)=a+i*(b-a)/N                   !Istruzione Do contratta
+     y=Sin(x)
+     if(integrate(x,y,integr_s,'simpson')/=0) stop
+     print *,integr_s
+     write(1,'(5(x,E19.12))') integr_s
+     Deallocate (x,y)
+  End do
+  close(1)
+  
+End Program Piano_Tasse
