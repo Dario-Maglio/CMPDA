@@ -1,0 +1,5 @@
+Sources and authors:
+
+-> Prof. Andrea Rizzi
+"Computing methods for experimental physics and data analysis" course
+Physics department of UniPi

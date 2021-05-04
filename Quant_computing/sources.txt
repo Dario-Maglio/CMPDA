@@ -1,0 +1,4 @@
+Sources and authors:
+
+-> IBM Quantum
+Quantum computing platform and summer school

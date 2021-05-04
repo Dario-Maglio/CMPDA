@@ -1,0 +1,5 @@
+Sources and authors:
+
+-> Prof. Luca Baldini
+"Computing methods for experimental physics and data analysis" course
+Physics department of UniPi
