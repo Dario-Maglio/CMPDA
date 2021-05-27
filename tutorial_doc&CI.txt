@@ -1,6 +1,7 @@
 cp .travis.yml e .readthedocs.yml
 mkdir Docs e Tests
 
+install sphinx
 sphinx-quickstart in Docs
 make html to compile the Makefile
 
