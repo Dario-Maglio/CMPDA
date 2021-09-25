@@ -10,6 +10,13 @@ func(verbose=False)
 func(verbose=True, num_events=3)
 #func(True) this raise an error
 
+def greet_me(**kwargs):
+    for key, value in kwargs.items():
+        print("{0} = {1}".format(key, value))
+
+#>>> greet_me(name="yasoob")
+#name = yasoob
+
 #----------------------------------------------------
 list1 = [k**2 for k in range(2, 8)]
 list2 = [k + 3 for k in list1]

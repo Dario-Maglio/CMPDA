@@ -12,10 +12,29 @@ print(msg)
 #data structures------------------------------------------------
    #list
 print('\nLists')
+# Initialization from a list
+a1 = np.array([1., 2., 3])
+print(a1)
+# Zeros, ones, and fixed values
+a2 = np.zeros(10)
+a3 = np.ones((2, 2))
+a4 = np.full(7, 3.)
+print(a2)
+print(a3)
+print(a4)
+# Grids, masks and functions
+a5 = np.linspace(0., 10., 11)
+a6 = np.log10(a5 + 10)
+mask = a5 <=5.
+print(a5)
+print(a6)
+print(mask)
+print(a6[mask])
+
 lists=[3,5,[4,3],'Hi',7.4]
 print(lists)
 lists[1]=s[0]
-print(lists+['a',2]) #addedd and multip like strings
+print(lists+['a',2]) #added and multip like strings
 B= (3 in lists) #true or false
 lists.append(B)
 print (lists)
@@ -28,8 +47,8 @@ squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 print(squares[:7])
 print(squares[2:8:3])
 print(squares[::-1])
-#other way to defin lists
-evens=[i**2 for i in range(10) if i**2 % 2 == 0]
+#other way to defin lists (comprehension)
+evens=[i**2 for i in range(20) if i**2 % 2 == 0]
 print(evens)
 
    #Dictionary
@@ -224,7 +243,6 @@ print((lambda x: x**2 + 5*x + 4) (-4))
 #argument.
 def add_five(x):
   return x + 5
-
 nums = [11, 22, 33, 44, 55]
 result = list(map(add_five, nums))
 print(result)
@@ -261,12 +279,28 @@ print(is_even(23))
 #modules--------------------------------------------------------
 import random
 
+[random.gauss(0.,1.) for i in range (10)]
+
 for i in range(5):
    value = random.randint(1, 6)
    print(value)
 
+import time as tm
+start = tm.time()
+x = [i*random.random() for i in range(1, 11)] #Very SLOWER
+end = tm.time() - start
+print(end)
+print(x)
+start = tm.time()
+y = np.random.random(size=10) #random in range [0,1) FASTER
+end = tm.time() - start
+print(end)
+print(y)
+
+
 from math import pi
 print(pi)
+print(round(pi,3))
 
 from math import sqrt as square_root
 print(square_root(100))
@@ -281,13 +315,8 @@ random.__file__ """Trovare il percorso sul disco di una libreria"""
 import math
 dir(math) """Info su funzioni all'interno"""
 help(math)
-
 locals().keys() """lista tutti oggetti in uso,
                    locals() è un dizionario"""
-
-
-"""Carrellata moduli std"""
-[ random.gauss(0.,1.) for i in range (10)]
 
 
 #files----------------------------------------------------------
