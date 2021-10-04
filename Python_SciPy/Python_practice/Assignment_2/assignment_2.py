@@ -31,6 +31,7 @@ class VoltageData:
         return self._data[index]
 
     def __iter__(self):
+        """Inherits iterability"""
         return iter(self._data)
 
     def __str__(self):
