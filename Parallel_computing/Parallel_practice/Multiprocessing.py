@@ -17,7 +17,7 @@ if __name__=='__main__':
     # Define an output queue
     output = mp.Queue()
     # Setup a list of processes that we want to run
-    processes = [mp.Process(target=Hello, args=(x, 'Gianluca')) for x in range(4)]
+    processes = [mp.Process(target=Hello, args=(x, 'Gianluca')) for x in range(10)]
     # Run processes
     for p in processes:
         p.start()
@@ -29,10 +29,15 @@ if __name__=='__main__':
     print(results)
 
     # Define a Pool, while .map execute and close the list of processes
+    # Pool permette di usare tutte le risorse a disposizione della macchina
     proc = mp.Pool(processes=7)
-    results = proc.map(cube,range(1,20))
+    results = proc.map(cube,range(1,40))
     print(results)
+    # Non c'è bisogno della coda e del join (sync di default)
 
     pool = mp.Pool(processes=7)
-    results = pool.map_async(cube,range(1,20))
-    print(results.get())
+    results = pool.map_async(cube,range(1,40))
+    print(results.get(timeout=1))
+    # Sync significa che li lancia e aspetta il risultato
+    # Timeout è un delay dopo il quale eseguire le righe successive
+    # analogo time.sleep(1)

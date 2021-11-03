@@ -1,8 +1,12 @@
-Sources and authors:
+References and authors:
 
 -> Prof. Andrea Rizzi
-"Computing methods for experimental physics and data analysis" course
+"Computing methods for experimental physics and data analysis" (CMEPDA) course
 Physics department of UniPi
+https://elearning.df.unipi.it/course/view.php?id=344
 
--> Prof. Pierini ?
-Deep learining and GNN class
+
+-> Prof. Pierini Maurizio
+Deep learining and GNN lessons for the CMEPDA course
+European research council
+https://github.com/pierinim/tutorials.git

@@ -1,5 +1,0 @@
-Sources and authors:
-
--> Prof. Adolfo Avella
-"Fisica computazionale" course
-Physics department of UniSa

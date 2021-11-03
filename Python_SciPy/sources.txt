@@ -1,5 +1,7 @@
-Sources and authors:
+References and authors:
 
--> Prof. Luca Baldini
+-> Prof. Baldini Luca
+-> Prof. Manfreda Alberto
 "Computing methods for experimental physics and data analysis" course
 Physics department of UniPi
+https://github.com/lucabaldini/cmepda.git
