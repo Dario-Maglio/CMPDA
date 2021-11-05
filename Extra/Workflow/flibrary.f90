@@ -7,7 +7,7 @@
 !!== All of the contents have been strongly modified by the author, but also tested.  ==
 !!======================================================================================
 
-Module library
+Module flibrary
 
 !!======================================================================================
 !!Index
@@ -1766,4 +1766,4 @@ Contains                                                    !Introduce procedure
   
   End function diagonalizationR
 
-End Module library 
+End Module flibrary 

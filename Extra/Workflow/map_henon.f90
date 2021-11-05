@@ -1,13 +1,15 @@
 Program Drive
 
+  use flibrary
+
   Implicit none
   Real(8) :: x = -0.85, y = -0.85, x_, y_, delta, alpha=0.1
   Integer(4) :: i,j
   Integer(4), parameter :: N=10, M=10000
-  
-  delta = abs(2*x)/N 
+
+  delta = abs(2*x)/N
   Open(1, file='punti.dat')
-  
+
   Do j=1, 4
     Do while (x < 0.9)
       Do while (y < 0.9)
@@ -26,10 +28,10 @@ Program Drive
     x = -0.85
     alpha = alpha + j*0.1
   End do
-  
+
   Close(1)
-  
-Contains 
+
+Contains
 
   Subroutine update(x,y,alpha)
     Implicit none
@@ -38,5 +40,5 @@ Contains
     x = x*cos(alpha) - (y - x**2)*sin(alpha)
     y = x_*sin(alpha) + (y - x_**2)*cos(alpha)
   End subroutine update
-        
+
 End program Drive
