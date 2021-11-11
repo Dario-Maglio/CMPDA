@@ -79,11 +79,13 @@ if __name__ == "__main__":
     PARSER.add_argument('-v', '--verbose', action='store_true', help='DEBUG')
     ARGS = PARSER.parse_args()
 
-    logger = logging.getLogger("LocalLog")
+    #Define the logger handler
     ch = logging.StreamHandler()
     ch.setLevel(logging.DEBUG)
     formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
     ch.setFormatter(formatter)
+    #Define the logger
+    logger = logging.getLogger("LocalLog")
     logger.addHandler(ch)
 
     if ARGS.verbose:

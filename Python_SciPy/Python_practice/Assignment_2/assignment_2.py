@@ -62,7 +62,7 @@ if __name__ == '__main__':
     UnitTest - which you will se in a future lesson."""
     # Load some data
     t, v = numpy.loadtxt('sample_data_file.txt', unpack=True)
-    # Thest the constructor
+    # Test the constructor
     v_data = VoltageData(t, v)
     # Test len()
     assert len(v_data) == len(t)
@@ -83,6 +83,7 @@ if __name__ == '__main__':
     print(v_data)
     # Test plotting
     v_data.plot(fmt='ko', markersize=5, label='normal voltage')
+    #plt.gca returns a value for axis
     x_grid = numpy.linspace(min(t), max(t), 200)
     plt.plot(x_grid, v_data(x_grid), 'r-', label='spline')
     plt.legend()
