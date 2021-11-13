@@ -2,6 +2,9 @@
 from multiprocessing import Process
 import os
 
+def function(name):
+    print('Hello '+name)
+
 def f0(name):
     print( '\n-----> function ' +name)
     print ( "I am still the main process with ID "
@@ -18,9 +21,6 @@ def f2(name):
     print ( "I am still the first sub-process with ID "
         +str(os.getpid())+ ' my father is ID:' +str(os.getppid()))
     print("This is the end!")
-
-def function(name):
-    print('Hello '+name)
 
 #MAIN
 if __name__=='__main__':

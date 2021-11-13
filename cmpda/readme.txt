@@ -6,3 +6,7 @@ contribution guidelines, and a code of conduct, communicates expectations for
 your project and helps you manage contributions.
 
 Dove vanno messi i readme e come compaiono nella documentazione/su git
+versioner.py
+setup.cfg?
+setup from readme?
+pytest and verify requirements?

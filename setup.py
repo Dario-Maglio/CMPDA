@@ -5,7 +5,16 @@ from cmpda.__version__ import TAG
 
 _LICENSE = 'GNU General Public License v3'
 _PACKAGES = find_packages(exclude='Tests')
-_CLASSIFIERS = []
+_CLASSIFIERS = ['Intended Audience :: Science/Research',
+    'License :: OSI Approved :: '
+    'GNU General Public License v3',
+    'Operating System :: OS Independent',
+    'Programming Language :: Python',
+    'Programming Language :: C++',
+    'Programming Language :: Fortran',
+    'Intended Audience :: Science/Research',
+    'Topic :: Scientific computation',
+    'Development Status :: Beta']
 _SCRIPTS = []
 
 with open('requirements.txt', 'r') as f:
