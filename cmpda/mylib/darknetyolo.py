@@ -34,13 +34,13 @@ if __name__ == "__main__":
 
     if ARGS.thresh:
         thresh = float(input('Set the thresh level: '))
+        if ((thresh>1)&(thresh<100)):
+            thresh = thresh/100
     else:
         thresh = 0.25
 
-    if ((thresh>1)&(thresh<100)):
-        thresh = thresh/100
-    else:
-        print('Level not allowed. Default level selected: 25%.')
+    if not((thresh>0)&(thresh<1)):
+        print('Default level selected: 25%.')
         thresh = 0.25
 
     STAT = process(ARGS.inpfile, thresh)
