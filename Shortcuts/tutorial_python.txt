@@ -1,0 +1,33 @@
+install git pip pylint
+
+python3 -m pip install --user numpy scipy matplotlib ipython jupyter pandas pytest scikit-learn
+
+use python3 -m module to run module such as jupyter notebook
+or add export PATH=$PATH:~/.local/bin to .bashrc
+
+install ROOT from github and append to .bashrc
+source github/builddir/installdir/bin/thisroot.sh
+use root from bash to run ROOT
+
+To execute fortran subrutines in python
+python -m numpy.f2py -c -m aaa aaa.f
+import aaa
+
+darknet Yolo
+git clone https://github.com/pjreddie/darknet
+cd darknet
+make
+wget https://pjreddie.com/media/files/yolov3.weights
+example
+./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
+
+
+#------------------------------------- personal shortcut added to .bashrc
+
+export PATH=$PATH:~/.local/bin
+
+alias python=python3
+alias jupyter='jupyter notebook'
+alias darknetYolo='python3 ~/github/CMPDA/cmpda/mylib/darknetyolo.py'
+
+source /home/dario/github/ROOT/builddir/installdir/bin/thisroot.sh
