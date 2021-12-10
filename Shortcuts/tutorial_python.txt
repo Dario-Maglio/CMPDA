@@ -1,8 +1,8 @@
 install git pip pylint
 
 python3 -m pip install --user pytest ipython jupyter pandas
-python3 -m pip install --user numpy scipy scikit-learn keras
-python3 -m pip install --user matplotlib
+numpy scipy scikit-learn keras tensorflow matplotlib opencv
+sudo apt install graphviz to plot models
 
 use python3 -m module to run module such as jupyter notebook
 or add export PATH=$PATH:~/.local/bin to .bashrc

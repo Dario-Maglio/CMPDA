@@ -16,8 +16,8 @@ fig, axes = plt.subplots(2)
 camera = Camera(fig)
 t = np.linspace(0, 2 * np.pi, 128)
 for i in t:
-    axes[0].plot(t, np.sin(t + i), color='orange', label =f'first {t}')
-    axes[1].plot(t, np.sin(t - i), color='blue', label =f'second {t}')
+    a = axes[0].plot(t, np.sin(t + i), color='orange', label =f'first {t}')
+    b = axes[1].plot(t, np.sin(t - i), color='blue', label =f'second {t}')
     camera.snap()
 
 animation = camera.animate()
