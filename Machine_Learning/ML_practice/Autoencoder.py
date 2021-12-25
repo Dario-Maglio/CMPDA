@@ -1,4 +1,4 @@
-"""Autoencoding assignmet"""
+"""Autoencoder"""
 
 from math import pi
 
@@ -6,7 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from keras.models import Model
-from keras.layers import Input, Dense
+from keras.layers import Input, Dense, Dropout
 from keras.callbacks import EarlyStopping, ReduceLROnPlateau
 from tensorflow.keras.utils import plot_model
 from sklearn.model_selection import train_test_split as test_split
@@ -15,7 +15,6 @@ N=1000
 
 theta = np.random.random(N)*2*pi
 radius = 0.95 + np.random.random(N)*0.1
-
 
 x = radius*np.cos(theta)
 y = radius*np.sin(theta)
@@ -28,14 +27,14 @@ plt.figure('Data')
 plt.scatter(x,y)
 plt.show()
 
-"""GAN configuration and training"""
+"""Configuration and training"""
 
 inputs = Input(shape=(2,))
-hidden = Dense(50, activation='relu')(inputs)
-hidden = Dense(50, activation='relu')(hidden)
+hidden = Dense(300, activation='relu')(inputs)
+hidden = Dense(300, activation='relu')(hidden)
 latent = Dense(1, activation='sigmoid')(hidden)
-hidden = Dense(50, activation='relu')(latent)
-hidden = Dense(50, activation='relu')(hidden)
+hidden = Dense(300, activation='relu')(latent)
+hidden = Dense(300, activation='relu')(hidden)
 outputs = Dense(2, activation='linear')(hidden)
 
 model = Model(inputs=inputs, outputs=outputs, name='autoencoder')
@@ -47,8 +46,8 @@ history = model.fit(X_train, y_train,
           validation_data=(X_test, y_test),
           epochs=1000, verbose=2,
           callbacks=[
-          EarlyStopping(monitor='val_loss', patience=20, verbose=0),
-          ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=10, verbose=0)
+          EarlyStopping(monitor='val_loss', patience=30, verbose=0),
+          ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=15, verbose=0)
           ])
 
 plt.figure('Training')

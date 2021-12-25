@@ -13,10 +13,10 @@ MAX_S = 4
 
 np.random.seed(42)
 
-names = ['Agent '+str(i+1) for i in range(N)]
+names = ['Agent_'+str(i+1) for i in range(N)]
 memories = np.random.randint(1, MAX_M, size=N)
 strategies =  np.random.randint(1, MAX_S, size=N)
-history = [1. for i in range(MAX_M + 1)]
+history = np.array([1. for i in range(MAX_M + 1)])
 
 class Agent:
     """Neural network describing the agent behaviour with a memory of M last
@@ -30,7 +30,7 @@ class Agent:
         self._M = M
         self._S = S
 
-        inputs = Input(shape=(self._M,))
+        inputs = Input(shape=(self._M, 1))
         strategies = Dense(self._S, activation='sigmoid')(inputs)
         outputs = Dense(1, activation='sigmoid')(strategies)
         self._model = Model(inputs=inputs, outputs=outputs, name=self._name)
@@ -55,7 +55,9 @@ class Agent:
     def __call__(self, Tseq):
         """Evaluates the behaviour of the agent after a given time sequence.
         """
-        return self._model.predict(Tseq[0:self._M])
+        print(Tseq[0:self._M])
+        print(Tseq[0:self._M].reshape(1, self._M, 1))
+        return self._model.predict(Tseq[0:self._M].reshape(1, self._M))
 
 agents = Agent(names[0], memories[0], strategies[0])
 print(agents.name)

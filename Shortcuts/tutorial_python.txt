@@ -7,6 +7,9 @@ sudo apt install graphviz to plot models
 use python3 -m module to run module such as jupyter notebook
 or add export PATH=$PATH:~/.local/bin to .bashrc
 
+pip install versioneer and then versioneer install into the project folder
+and add the version to setup.py and use git TAG 1.1.1 to change tag
+
 install ROOT from github and append to .bashrc
 source github/builddir/installdir/bin/thisroot.sh
 use root from bash to run ROOT

@@ -11,8 +11,6 @@ def process(inpfile, thresh):
     ipath = os.getcwd()
     if not os.path.exists('{0}/{1}'.format(ipath,inpfile)):
         return 1
-    if not inpfile.endswith('.jpg'):
-        return 2
 
     os.system('cp {0} ~/github/darknet/data'.format(inpfile))
     os.chdir('/home/dario/github/darknet')
@@ -48,5 +46,3 @@ if __name__ == "__main__":
         print('The work is done.')
     elif STAT == 1:
         print("The file doesn't exist.")
-    elif STAT == 2:
-        print('Wrong extension: jpg format is needed.')

@@ -1,16 +1,16 @@
 void makeHist() {
-  TH1F *hist = new TH1F("hist","My Histogram", 40, 0, 4);
-  hist->Draw(); // shows histogram
-} // does not destroy hist!
+  TH1F *hist = new TH1F("histogram","My Histogram;Asse1;Asse2", 40, 0, 4);
+  hist->Draw();
+}
 
 void makeHist2() {
   TH1F *hist = new TH1F("hist","My Histogram", 40, 0, 4);
-  TF1 *fun = new TF1("f2", "[0]*sin([1]*x)", 0., 4.);
+  TF1 *fun = new TF1("functionName", "[0]*sin([1]*x)", 0., 4.);
   fun->SetParameters(400,4);
   hist->FillRandom("gaus");
-  hist->Draw(); // shows histogram
+  hist->Draw();
   fun->Draw("Same");
-} // does not destroy hist!
+}
 
 void makeTGraph() {
   TGraph *g = new TGraph;
