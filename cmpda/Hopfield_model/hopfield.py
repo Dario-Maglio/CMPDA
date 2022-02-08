@@ -99,7 +99,7 @@ class HopfieldNet:
 
 
 # dimensions of the images
-Lx = Ly = 80
+Lx = Ly = 100
 N = Lx*Ly # number of neurons
 
 
@@ -107,7 +107,7 @@ N = Lx*Ly # number of neurons
 ## STEP 1: READ THE IMAGES AND CONVERT THEM TO BINARY PATTERNS
 
 # list of images that I want to store in my network
-files = ["stored/batman0.png", "stored/cat.jpg", "stored/aaaa.jpg"]
+files = ["stored/batman.png", "stored/spider.jpg", "stored/vip.jpg", "stored/cat.jpg"]
 
 print ("Reading images and coverting to binary patterns...")
 patterns = []
@@ -120,7 +120,7 @@ mynet = HopfieldNet(N, patterns)
 
 
 ## STEP 3: SET ANOTHER INPUT PATTERN AS INITIAL CONDITION
-newinput = readPatterns("inputs/ssss.jpg", size=[Lx,Ly]) # read the pattern from a file
+newinput = readPatterns("inputs/batman4.png", size=[Lx,Ly]) # read the pattern from a file
 mynet.set_state(newinput) # set the pattern as the initial condition of the network
 plt.matshow(np.resize(mynet.s,(Lx,Ly)), cmap=plt.cm.gray, fignum=0) # read the state (we reconvert it to a Lx*Ly matrix) and plot it
 plt.title("Initial condition")
