@@ -1,0 +1,2 @@
+include versioneer.py
+include cmpda/mylib/_version.py

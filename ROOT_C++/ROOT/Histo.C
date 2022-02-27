@@ -6,7 +6,7 @@ void makeHist() {
 void makeHist2() {
   TH1F *hist = new TH1F("hist","My Histogram", 40, 0, 4);
   TF1 *fun = new TF1("functionName", "[0]*sin([1]*x)", 0., 4.);
-  fun->SetParameters(400,4);
+  fun->SetParameters(40,4);
   hist->FillRandom("gaus");
   hist->Draw();
   fun->Draw("Same");
@@ -20,8 +20,12 @@ void makeTGraph() {
   g->SetMarkerColor(kRed);
   g->SetLineColor(kAzure);
   g->SetTitle("My Graph; The X; My Y");
+  // gPad->SetGrid();
+  // gPad->SetLogy();
+  // auto txt = "#color[773]{My LaTex text #gamma^{1024}}";
+  // TLatex l(1.,1.,txt);
+  // l.Draw();
   g->Draw();
-
 }
 
 void macro2(){
@@ -30,7 +34,7 @@ void macro2(){
   h->SetContour(200);
   float px, py;
   for (int i = 0; i < 25000000; i++) {
-    gRandom->Rannor(px,py);
+    gRandom->Rannor(px,py); //Returns two number according to a Gaussian
     h->Fill(px-1,5*py);
     h->Fill(2+0.5*px,2*py-10.,0.1);
   }

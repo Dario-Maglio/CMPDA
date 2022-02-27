@@ -24,7 +24,7 @@ def process(inpfile, thresh):
 
     return 0
 
-if __name__ == "__main__":
+def cli():
     PARSER = argparse.ArgumentParser()
     PARSER.add_argument('inpfile', type=str, help='Path to the input file')
     PARSER.add_argument('-t', '--thresh', action='store_true', help='thresh')
@@ -46,3 +46,6 @@ if __name__ == "__main__":
         print('The work is done.')
     elif STAT == 1:
         print("The file doesn't exist.")
+
+if __name__ == "__main__":
+    cli()

@@ -6,13 +6,11 @@ sudo apt install graphviz to plot models
 
 use python3 -m module to run module such as jupyter notebook
 or add export PATH=$PATH:~/.local/bin to .bashrc
+as example
+python3 -m unittest discover to run tests
 
-pip install versioneer and then versioneer install into the project folder
-and add the version to setup.py and use git TAG 1.1.1 to change tag
-
-install ROOT from github and append to .bashrc
-source github/builddir/installdir/bin/thisroot.sh
-use root from bash to run ROOT
+pip install versioneer and then versioneer install into the project folder and
+add the version to setup.py and use git tag 1.1.1 to change tag
 
 To execute fortran subrutines in python
 python -m numpy.f2py -c -m aaa aaa.f
@@ -33,6 +31,3 @@ export PATH=$PATH:~/.local/bin
 
 alias python=python3
 alias jupyter='jupyter notebook'
-alias darknetYolo='python3 ~/github/CMPDA/cmpda/mylib/darknetyolo.py'
-
-source /home/dario/github/ROOT/builddir/installdir/bin/thisroot.sh

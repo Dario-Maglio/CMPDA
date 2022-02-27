@@ -3,10 +3,13 @@
 import ROOT
 
 cpp_code = """
-int f(int i) { return i*i; }
+int f(int i) {
+    return i*i;
+};
+
 class A {
-public:
-A() { cout << "Hello PyROOT!" << endl; }
+    public:
+    A() {cout << "Hello PyROOT!" << endl;}
 };
 """
 # Inject the code in the ROOT interpreter
