@@ -19,7 +19,7 @@ public:
     name(nam), telnum(tel), email(mail) {}
 
   void print() const {
-    std::cout<<name<<", "<<telnum<<", "<<email<<std::endl;
+    std::cout<<name<<" "<<telnum<<" "<<email<<std::endl;
     for (std::map<std::string,std::string>::const_iterator it = addinfo.begin();
                                                     it != addinfo.end(); it++) {
       std::cout<< " -"<< it->first << " is "<< it->second<<std::endl;

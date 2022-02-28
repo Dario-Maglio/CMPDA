@@ -20,11 +20,6 @@ void makeTGraph() {
   g->SetMarkerColor(kRed);
   g->SetLineColor(kAzure);
   g->SetTitle("My Graph; The X; My Y");
-  // gPad->SetGrid();
-  // gPad->SetLogy();
-  // auto txt = "#color[773]{My LaTex text #gamma^{1024}}";
-  // TLatex l(1.,1.,txt);
-  // l.Draw();
   g->Draw();
 }
 
