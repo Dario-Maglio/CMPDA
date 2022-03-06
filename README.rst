@@ -1,7 +1,7 @@
 Computing methods for physics and data analysis
 ===============================================
 
-.. image:: https://app.travis-ci.com/Dario-Caf/CMPDA.svg?token=CU75XJMZEfpn2pXoDzzi&branch=main
+.. image:: https://app.travis-ci.com/Dario-Caf/CMPDA.svg?branch=main
     :target: https://app.travis-ci.com/Dario-Caf/CMPDA
 
 .. image:: https://readthedocs.org/projects/cmpda/badge/?version=latest
