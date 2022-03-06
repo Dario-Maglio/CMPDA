@@ -1,11 +1,25 @@
-Sources and authors:
+ROOT and C++
+============
 
--> Prof. Rizzi Andrea 
+ROOT framework, C and C++ codes
+
+
+References and authors
+-----------------------
+
+-> Prof. Rizzi Andrea
+
 "Computing methods for experimental physics and data analysis" course
+
 Physics department of UniPi
+
 https://github.com/lucabaldini/cmepda.git
 
+
 -> Prof. De Marco Gianluca
+
 "Informatica" course
+
 Physics department of UniSa
+
 https://docenti.unisa.it/004514/didattica?anno=2017&id=507624&cId=9999-2017&pId=N0*N0

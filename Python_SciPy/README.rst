@@ -1,7 +1,21 @@
-References and authors:
+Python and SciPy
+================
+
+Slides, tutorial and assignments.
+
+Modules: logging, argparse, numpy, matplotlib
+
+
+
+References and authors
+----------------------
 
 -> Prof. Baldini Luca
+
 -> Prof. Manfreda Alberto
+
 "Computing methods for experimental physics and data analysis" course
+
 Physics department of UniPi
+
 https://github.com/lucabaldini/cmepda.git
