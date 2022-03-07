@@ -1,14 +1,23 @@
 #!/usr/bin/env python3
 """Interface to use Yolov3"""
+#Cloning darknet in the home/github folder
 # git clone https://github.com/pjreddie/darknet
 # cd darknet
 # make
 # wget https://pjreddie.com/media/files/yolov3.weights
-# example
+#Example
 # ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
 
 import os
 import argparse
+DESCRIPTION = """
+This command allows the user to use a Yolo classifier
+from darknet to identify the object in a picture. The
+only required input is the file path. You can also set
+the noise threshold adding -t. Then, the program ask
+you to insert the desired percentage. Default is 25%.
+An error is returned if the file doesn't exist.
+"""
 
 
 def process(inpfile, thresh):
@@ -31,7 +40,11 @@ def process(inpfile, thresh):
     return 0
 
 def cli():
-    PARSER = argparse.ArgumentParser()
+    PARSER = argparse.ArgumentParser(
+        prog='darkYolo',
+        formatter_class=argparse.RawTextHelpFormatter,
+        description='darkYolo\n' + DESCRIPTION,
+        epilog="Further information:\nhttps://pjreddie.com/darknet/yolo")
     PARSER.add_argument('inpfile', type=str, help='path to the input file')
     PARSER.add_argument('-t', '--thresh', action='store_true', help='thresh')
     ARGS = PARSER.parse_args()
