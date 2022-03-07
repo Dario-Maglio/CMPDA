@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
 """Interface to use Yolov3"""
+# git clone https://github.com/pjreddie/darknet
+# cd darknet
+# make
+# wget https://pjreddie.com/media/files/yolov3.weights
+# example
+# ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
 
 import os
 import argparse
@@ -26,7 +32,7 @@ def process(inpfile, thresh):
 
 def cli():
     PARSER = argparse.ArgumentParser()
-    PARSER.add_argument('inpfile', type=str, help='Path to the input file')
+    PARSER.add_argument('inpfile', type=str, help='path to the input file')
     PARSER.add_argument('-t', '--thresh', action='store_true', help='thresh')
     ARGS = PARSER.parse_args()
 
