@@ -19,25 +19,83 @@ from scipy.integrate import odeint
 
 
 
+# Parameters
+A = 0.
+B = 1.
+STEPS = 10000
+
+# Filling the x axis
+xgrid = np.linspace(A, B, STEPS)
+
+#-------------------------------------------------------------------------------
+
 def odesys(y, t, k1, k2, k3):
-    """Define the system of equations."""
+    """Define the system of equations in the form of dydt = M * y ."""
     y1, y2 = y
     dydt = [k1*y1 - k2*y1*y2,
             k2*y1*y2 - k3*y2]
     return dydt
 
-# Parameters
-k1, k2, k3 = [1., 1., 1.]
-# Initial conditions
-y0 = [3, 2]
-# Filling the x axis
-x = np.linspace(0, 10, 101)
+def fun(x):
+    """Define the stochastic functions in the form dx = f(x)*dt + g(x)*dw ."""
+    f = np.full_like(x, 0.)
+    g = x
+    return [f, g]
 
-sol = odeint(odesys, y0, x, args=(k1, k2, k3))
+def dfun(x):
+    """Define the derivatives of the stochastic functions."""
+    df = np.full_like(x, 0.)
+    dg = np.full_like(x, 0.)
+    return [df, dg]
 
-plt.plot(x, sol[:, 0], 'b', label='x1')
-plt.plot(x, sol[:, 1], 'g', label='x2')
-plt.legend(loc='best')
-plt.xlabel('t')
-plt.grid()
-plt.show()
+
+def heun(x0, dt, z, fun, dfun):
+    z = np.sqrt(dt) * z
+
+    f0, g0 = fun(x0)
+    dfdt0, dgdt0 = dfun(x0)
+    x1 = z*g0 + f0*dt + 0.5*g0*dgdt0*(z**2)
+
+    f1, g1 = fun(x1)
+    dfdt1, dgdt1 = dfun(x1)
+    x2 = z*g1 + f1*dt + 0.5*g1*dgdt1*(z**2)
+
+    return x0 + 0.5*(x1 + x2)
+
+#-------------------------------------------------------------------------------
+
+def ode_solver():
+    plt.figure("ODE soultion")
+    y0 = [0.5, 0.5]
+    k1, k2, k3 = [10, 10, 10]
+    sol = odeint(odesys, y0, xgrid, args=(k1, k2, k3))
+
+    plt.plot(xgrid, sol[:, 0], 'b', label='prede')
+    plt.plot(xgrid, sol[:, 1], 'g', label='predatori')
+    plt.legend(loc='best')
+    plt.xlabel('t')
+    plt.grid()
+    plt.show()
+
+def sde_solver():
+    plt.figure("SDE soultion")
+    y0 = 0.5
+    dt = [xgrid[i+1]-xgrid[i] for i in range(STEPS - 1)]
+    z = np.random.normal(size=(STEPS))
+    y = np.full(STEPS, y0)
+    for index in range(STEPS - 1):
+        y[index + 1] = heun(y[index], dt[index], z[index], fun, dfun)
+
+    plt.plot(xgrid, y, 'b', label='x')
+    plt.legend(loc='best')
+    plt.xlabel('t')
+    plt.grid()
+    plt.show()
+
+#-------------------------------------------------------------------------------
+
+if __name__=="__main__":
+
+    ode_solver()
+
+    sde_solver()
