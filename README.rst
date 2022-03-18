@@ -17,11 +17,19 @@ Codes and materials come from different resources: the most are from the
 "Computing methods for experimental physics and data analysis" and "Metodi
 numerici" courses of the University of Pisa, and another consistent piece comes
 from the "Fisica computazionale" course of the University of Salerno. All
-sources are linked into the documentation or into the README file of the
+sources are reported into the documentation and into the README file of the
 relative directories.
 
-Some of the contents are numerical algorithms, machine learning stuff and
+Here you can also find numerical algorithms, machine learning stuff and
 general physics scripts.
+
+Use this repository as an example of complete project: `EM`_
+
+.. _EM: https://github.com/Dario-Caf/EM-shower-simulator-with-NN.git
+
+Get started with the following Jupyter notebook: `INTRO`_
+
+.. _INTRO: https://colab.research.google.com/github/Dario-Caf/CMPDA/blob/main/shortcuts_tutorial/Introduction.ipynb
 
 
 Examples
