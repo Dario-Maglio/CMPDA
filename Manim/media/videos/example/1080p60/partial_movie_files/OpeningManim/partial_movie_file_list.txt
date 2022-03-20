@@ -1,0 +1,11 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/dario/github/CMPDA/slides/media/videos/example/1080p60/partial_movie_files/OpeningManim/2724823860_2844703752_223132457.mp4'
+file 'file:/home/dario/github/CMPDA/slides/media/videos/example/1080p60/partial_movie_files/OpeningManim/1164547788_3638504700_2373018138.mp4'
+file 'file:/home/dario/github/CMPDA/slides/media/videos/example/1080p60/partial_movie_files/OpeningManim/1164547788_589824911_1515196141.mp4'
+file 'file:/home/dario/github/CMPDA/slides/media/videos/example/1080p60/partial_movie_files/OpeningManim/1164547788_3638504700_3791788015.mp4'
+file 'file:/home/dario/github/CMPDA/slides/media/videos/example/1080p60/partial_movie_files/OpeningManim/1164547788_4277843476_3890272371.mp4'
+file 'file:/home/dario/github/CMPDA/slides/media/videos/example/1080p60/partial_movie_files/OpeningManim/1164547788_3638504700_4123596119.mp4'
+file 'file:/home/dario/github/CMPDA/slides/media/videos/example/1080p60/partial_movie_files/OpeningManim/1164547788_2017669110_1169842831.mp4'
+file 'file:/home/dario/github/CMPDA/slides/media/videos/example/1080p60/partial_movie_files/OpeningManim/1164547788_3638504700_919232571.mp4'
+file 'file:/home/dario/github/CMPDA/slides/media/videos/example/1080p60/partial_movie_files/OpeningManim/1164547788_3610471562_2134438265.mp4'
+file 'file:/home/dario/github/CMPDA/slides/media/videos/example/1080p60/partial_movie_files/OpeningManim/1164547788_3638504700_2349405048.mp4'
