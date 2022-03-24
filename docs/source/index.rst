@@ -11,15 +11,17 @@
 
 .. include:: ../../Fortran_computation/README.rst
 
-.. include:: ../../Numerical_methods/README.rst
-
 .. include:: ../../Parallel_computing/README.rst
 
 .. include:: ../../Machine_Learning/README.rst
 
+.. include:: ../../Quantum_computing/README.rst
+
+.. include:: ../../Numerical_methods/README.rst
+
 .. include:: ../../Tensor_network/README.rst
 
-.. include:: ../../Quantum_computing/README.rst
+.. include:: ../../Manim/README.rst
 
 API
 ===
