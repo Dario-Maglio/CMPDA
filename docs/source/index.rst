@@ -19,7 +19,7 @@
 
 .. include:: ../../Numerical_methods/README.rst
 
-.. include:: ../../Tensor_network/README.rst
+.. include:: ../../Numerical_methods/Tensor_network/README.rst
 
 .. include:: ../../Manim/README.rst
 

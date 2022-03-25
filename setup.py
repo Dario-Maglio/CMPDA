@@ -13,12 +13,6 @@
 """
 
 import setuptools
-from pkg_resources import parse_version
-
-#requirement to use the setup.cfg file during the setup
-setuptools_version = parse_version(setuptools.__version__)
-if setuptools_version < parse_version('39.2'):
-    raise SystemExit('Please upgrade setuptools')
 
 with open('requirements.txt', 'r') as f:
     _DEPENDENCIES = f.read().splitlines()
