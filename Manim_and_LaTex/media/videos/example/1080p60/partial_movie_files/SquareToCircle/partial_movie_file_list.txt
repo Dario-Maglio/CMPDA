@@ -1,4 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/home/dario/github/CMPDA/slides/media/videos/example/1080p60/partial_movie_files/SquareToCircle/2724823860_3451491419_223132457.mp4'
-file 'file:/home/dario/github/CMPDA/slides/media/videos/example/1080p60/partial_movie_files/SquareToCircle/1164547788_1283127080_2319886907.mp4'
-file 'file:/home/dario/github/CMPDA/slides/media/videos/example/1080p60/partial_movie_files/SquareToCircle/1164547788_1853876462_2319886907.mp4'
