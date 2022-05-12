@@ -27,8 +27,7 @@ Use this repository as an example of complete project: `EM`_
 
 Get started with the following Jupyter notebook: `INTRO`_
 
-.. _INTRO: https://colab.research.google.com/github/Dario-Caf/CMPDA/blob/main/tutorial_&_shortcuts/Introduction.ipynb
-
+.. _INTRO: https://colab.research.google.com/github/Dario-Caf/CMPDA/blob/main/tutorial_and_shortcuts/Introduction.ipynb
 
 Examples
 --------
