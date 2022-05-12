@@ -1,10 +1,10 @@
-Machine learning
+Machine Learning
 ================
 
-Stuff with keras and tensorflow.
+Introduction to Machine Learning with keras and tensorflow.
 
-References and authors
-----------------------
+References
+----------
 
 -> Prof. Andrea Rizzi
 

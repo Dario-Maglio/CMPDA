@@ -5,23 +5,17 @@
 
 .. include:: ../../README.rst
 
+.. include:: ../../Manim_and_LaTex/README.rst
+
 .. include:: ../../Python_SciPy/README.rst
 
-.. include:: ../../ROOT_C++/README.rst
-
-.. include:: ../../Fortran_computation/README.rst
+.. include:: ../../ROOT_and_C++/README.rst
 
 .. include:: ../../Parallel_computing/README.rst
 
 .. include:: ../../Machine_Learning/README.rst
 
 .. include:: ../../Quantum_computing/README.rst
-
-.. include:: ../../Numerical_methods/README.rst
-
-.. include:: ../../Numerical_methods/Tensor_network/README.rst
-
-.. include:: ../../Manim/README.rst
 
 API
 ===

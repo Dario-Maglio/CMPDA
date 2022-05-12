@@ -1,4 +1,3 @@
-
 import numpy as np
 import matplotlib.cm as cm
 import matplotlib.pyplot as plt

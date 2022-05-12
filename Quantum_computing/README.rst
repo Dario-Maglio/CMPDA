@@ -1,10 +1,10 @@
 Quantum computing
 =================
 
-Things from IBM.
+Quantum Computing and Quantum Machine Learning from IBM tutorials.
 
-Sources and authors
--------------------
+References
+----------
 
 -> IBM Quantum
 

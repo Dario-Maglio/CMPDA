@@ -1,14 +1,11 @@
 Python and SciPy
 ================
 
-Slides, tutorial and assignments.
+Slides, tutorials and assignments to learn Python language. In this folder you
+can also find interesting physics scripts and functions visualization tools.
 
-Modules: logging, argparse, numpy, matplotlib
-
-
-
-References and authors
-----------------------
+References
+----------
 
 -> Prof. Baldini Luca
 

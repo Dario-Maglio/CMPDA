@@ -11,14 +11,12 @@ Computing methods for physics and data analysis
 Personal repository for physics computation and visualization!
 --------------------------------------------------------------
 
-Here you can find the basics of python, C, C++, ROOT, Fortran and quantum computing.
+Here you can find the basics of Python, C, C++, ROOT and quantum computing.
 
 Codes and materials come from different resources: the most are from the
 "Computing methods for experimental physics and data analysis" and "Metodi
-numerici" courses of the University of Pisa, and another consistent piece comes
-from the "Fisica computazionale" course of the University of Salerno. All
-sources are reported into the documentation and into the README file of the
-relative directories.
+numerici" courses of the University of Pisa. All sources are cited into the
+documentation and into the README file of each directory.
 
 Here you can also find numerical algorithms, machine learning stuff and
 general physics scripts.
@@ -29,7 +27,7 @@ Use this repository as an example of complete project: `EM`_
 
 Get started with the following Jupyter notebook: `INTRO`_
 
-.. _INTRO: https://colab.research.google.com/github/Dario-Caf/CMPDA/blob/main/shortcuts_tutorial/Introduction.ipynb
+.. _INTRO: https://colab.research.google.com/github/Dario-Caf/CMPDA/blob/main/tutorial_&_shortcuts/Introduction.ipynb
 
 
 Examples

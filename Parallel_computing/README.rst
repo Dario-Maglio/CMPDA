@@ -1,10 +1,11 @@
 Parallel computing
 ==================
 
-CUDA programming on GPU, Colab tutorial and python multiprocessing
+Introduction to CUDA programming on GPU, Colab tutorial and python
+multiprocessing modules.
 
-References and authors
-----------------------
+References
+----------
 
 -> Prof. Lamanna Gianluca
 
