@@ -23,27 +23,27 @@ general physics scripts.
 
 Use this repository as an example of complete project: `EM`_
 
-.. _EM: https://github.com/Dario-Caf/EM-shower-simulator-with-NN.git
+.. _EM: https://github.com/Dario-Maglio/EM-shower-simulator-with-NN.git
 
 Get started with the following Jupyter notebook: `INTRO`_
 
-.. _INTRO: https://colab.research.google.com/github/Dario-Caf/CMPDA/blob/main/tutorial_and_shortcuts/Introduction.ipynb
+.. _INTRO: https://colab.research.google.com/github/Dario-Maglio/CMPDA/blob/main/tutorial_and_shortcuts/Introduction.ipynb
 
 Examples
 --------
 
 Road to chaos with logistic and standard map:
 
-.. image:: https://raw.githubusercontent.com/Dario-Caf/CMPDA/main/Python_SciPy/Maps_and_chaos/map_logistic_Lyapunov.png
+.. image:: https://raw.githubusercontent.com/Dario-Maglio/CMPDA/main/Python_SciPy/Maps_and_chaos/map_logistic_Lyapunov.png
   :width: 800
   :alt: Alternative text
 
-.. image:: https://raw.githubusercontent.com/Dario-Caf/CMPDA/main/Python_SciPy/Maps_and_chaos/map_std.gif
+.. image:: https://raw.githubusercontent.com/Dario-Maglio/CMPDA/main/Python_SciPy/Maps_and_chaos/map_std.gif
   :width: 800
   :alt: Alternative text
 
 Hopfield model evolving from initial condition to a stored pattern:
 
-.. image:: https://raw.githubusercontent.com/Dario-Caf/CMPDA/main/Python_SciPy/Hopfield_model/animation.gif
+.. image:: https://raw.githubusercontent.com/Dario-Maglio/CMPDA/main/Python_SciPy/Hopfield_model/animation.gif
   :width: 800
   :alt: Alternative text
