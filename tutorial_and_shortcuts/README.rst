@@ -1,7 +1,7 @@
 Tutorial & shortcuts
 ====================
 
-Short path to different compiler and languages basic instructions.
+Short path to basic instructions of different compilers and languages.
 
 A fast overview on GIT, Python and ML is given into the jupyter notebook in this
 folder. Also a short configuration file in txt format helps to get started with
