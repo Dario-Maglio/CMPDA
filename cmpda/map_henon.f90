@@ -8,9 +8,9 @@ Program Drive
   Integer(4), parameter :: N=10, M=10000
 
   delta = abs(2*x)/N
-  Open(1, file='punti.dat')
+  Open(1, file='points.txt')
 
-  Do j=1, 4
+  Do j=1, 2
     Do while (x < 0.9)
       Do while (y < 0.9)
         Write(1,*) x, y, alpha
