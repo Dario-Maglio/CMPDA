@@ -1,4 +1,4 @@
-# manim -p -ql example.py SquareToCircle OpeningManim
+# manim -p -ql opening_manim.py SquareToCircle GridTransform
 
 from manim import *
 
@@ -14,7 +14,7 @@ class SquareToCircle(Scene):
         self.play(Transform(square, circle))
         self.play(FadeOut(square))
 
-class OpeningManim(Scene):
+class GridTransform(Scene):
     def construct(self):
         title = Tex(r"This is some \LaTeX")
         basel = MathTex(r"\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}")

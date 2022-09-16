@@ -2,9 +2,18 @@ Manim and LaTex
 ===============
 
 In this folder there are LaTex models and Manim scripts for the presentation of
-contents in a creative way.
+contents in an alternative way.
 
-Check the comunity repository of 3blue1brown for more information:
+To execute the code and display media: 
+
+.. code-block:: bash
+
+   $ pip install manim
+   $ cd Manim_code_and_media
+   $ manim -p -ql name.py SceneName
+
+
+Check the comunity repository of 3blue1brown for more information.
 
 Documentation:
 

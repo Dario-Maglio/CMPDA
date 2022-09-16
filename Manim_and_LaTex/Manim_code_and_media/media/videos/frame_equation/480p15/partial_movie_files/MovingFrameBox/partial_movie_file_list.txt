@@ -1,0 +1,6 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/dario/github/CMPDA/Manim_and_LaTex/Manim_code_and_media/media/videos/frame_equation/480p15/partial_movie_files/MovingFrameBox/3163782288_3576086251_223132457.mp4'
+file 'file:/home/dario/github/CMPDA/Manim_and_LaTex/Manim_code_and_media/media/videos/frame_equation/480p15/partial_movie_files/MovingFrameBox/2201830969_1621187400_3321939607.mp4'
+file 'file:/home/dario/github/CMPDA/Manim_and_LaTex/Manim_code_and_media/media/videos/frame_equation/480p15/partial_movie_files/MovingFrameBox/2201830969_329969645_2560169497.mp4'
+file 'file:/home/dario/github/CMPDA/Manim_and_LaTex/Manim_code_and_media/media/videos/frame_equation/480p15/partial_movie_files/MovingFrameBox/2201830969_3174577578_2012381992.mp4'
+file 'file:/home/dario/github/CMPDA/Manim_and_LaTex/Manim_code_and_media/media/videos/frame_equation/480p15/partial_movie_files/MovingFrameBox/2201830969_329969645_38931044.mp4'
