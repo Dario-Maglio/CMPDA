@@ -1,7 +1,7 @@
 ROOT and C++
 ============
 
-Introduction to C and C++ with simple codes and the ROOT framework.
+Introduction to C, C++  and the ROOT framework with simple examples.
 
 
 References

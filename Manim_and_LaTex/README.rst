@@ -1,7 +1,7 @@
 Manim and LaTex
 ===============
 
-In this folder there are LaTex models and Manim scripts for the presentation of
+LaTex models and Manim scripts for the presentation of
 contents in an alternative way.
 
 To execute the code and display media: 

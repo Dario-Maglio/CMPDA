@@ -1,3 +1,7 @@
+#############################################
+#-- Instructions to get started
+#############################################
+
 Install git pip pylint if not installed yet
 
 sudo apt-get install chrome-gnome-shell
@@ -5,7 +9,7 @@ sudo apt install graphviz # to plot tensorflow models
 sudo apt install ffmpeg   # to use manim and celluloid
 
 For basic modules installation run
-python3 -m pip install --user pytest numpy scipy matplotlib
+python3 -m pip install --user pytest numpy matplotlib scipy sympy 
 
 For ML modules installation run
 python3 -m pip install --user keras tensorflow scikit-learn
