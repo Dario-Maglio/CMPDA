@@ -42,17 +42,21 @@ Get started to GitHub, Colab and ML with the following Jupyter notebook: `INTRO`
 Examples
 --------
 
-Road to chaos with logistic and standard map:
+Here are some of the plots generated from the programs:
+
+- Logistic map and Lyapunov exponent:
 
 .. image:: https://raw.githubusercontent.com/Dario-Maglio/CMPDA/main/Python_SciPy/Maps_and_chaos/map_logistic_Lyapunov.png
   :width: 800
   :alt: Alternative text
 
+- Standard map and Torus breaking:
+
 .. image:: https://raw.githubusercontent.com/Dario-Maglio/CMPDA/main/Python_SciPy/Maps_and_chaos/map_std.gif
   :width: 800
   :alt: Alternative text
 
-Hopfield model evolving from initial condition to a stored pattern:
+- Hopfield model evolving from initial condition to a stored pattern:
 
 .. image:: https://raw.githubusercontent.com/Dario-Maglio/CMPDA/main/Python_SciPy/Hopfield_model/animation.gif
   :width: 800
